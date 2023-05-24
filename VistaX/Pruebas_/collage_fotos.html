@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe"
+        crossorigin="anonymous"></script>
+
+
+</head>
+<style>
+    img {
+        width: 100%;
+        max-height: 100%;
+    }
+
+    div {
+        border: 1px solid peru;
+    }
+
+    .containerFotosHabitacionComun {
+        display: grid;
+        /* grid-template-columns: repeat(5, 100em); */
+        /* grid-template-rows: 1.2fr 1.5fr 1fr; */
+        /* grid-template-rows: 10em 10em 10em;
+        grid-template-columns: 10em 10em 10em; */
+        grid-template-areas:
+            "foto1 foto2 foto3 foto4 foto5 "
+            
+        ;
+
+
+        grid-gap: 5px;
+
+    }
+
+    .containerFotosHabitacionLujo {
+        display: grid;
+        height: 50vh;
+        /* grid-template-columns: repeat(5, 100em); */
+        /* grid-template-rows: 1.2fr 1.5fr 1fr; */
+        /* grid-template-rows: 10em 10em 10em;
+        grid-template-columns: 10em 10em 10em; */
+        grid-template-areas:
+            "foto1 foto2 foto3 foto4 "
+            "foto5 foto6 foto7 foto8"
+            
+        ;
+
+
+        grid-gap: 5px;
+
+    }
+
+    .containerFotosHabitacionPresidencial {
+        display: grid;
+        height: 50vh;
+        /* grid-template-columns: repeat(5, 100em); */
+        /* grid-template-rows: 1.2fr 1.5fr 1fr; */
+        /* grid-template-rows: 10em 10em 10em;
+        grid-template-columns: 10em 10em 10em; */
+        grid-template-areas:
+            "foto1 foto2 foto3 foto4 foto5 "
+            "foto6 foto7 foto8 foto9 foto10"
+            
+        ;
+
+
+        grid-gap: 5px;
+
+    }
+
+    .container {
+        display: grid;
+        height: 100vh;
+        grid-template-columns: repeat(12, 100em);
+        /* grid-template-rows: 1.2fr 1.5fr 1fr; */
+        grid-template-rows: 10em 10em 10em;
+        grid-template-columns: 10em 10em 10em;
+        grid-template-areas:
+            "foto1 foto1 foto1 foto2 foto2  foto2  foto3  foto3  foto3  foto4  foto4  foto4"
+            "foto5 foto5 foto5 foto5 foto6  foto6  foto6  foto6  foto7  foto7  foto7  foto7"
+            "foto8 foto8 foto9 foto9 foto10 foto10 foto11 foto11 foto12 foto12 foto13 foto13"
+        ;
+
+
+        grid-gap: 5px;
+
+    }
+
+    .item {
+        background: #89ece1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .foto1 {
+        grid-area: foto1;
+    }
+
+    .foto2 {
+        grid-area: foto2;
+    }
+
+    .foto3 {
+        grid-area: foto3;
+    }
+
+    .foto4 {
+        grid-area: foto4;
+    }
+
+    .foto5 {
+        grid-area: foto5;
+    }
+
+    .foto6 {
+        grid-area: foto6;
+    }
+
+    .foto1 {
+        grid-area: foto1;
+    }
+
+    .foto7 {
+        grid-area: foto7;
+    }
+
+    .foto8 {
+        grid-area: foto8;
+    }
+
+    .foto9 {
+        grid-area: foto9;
+    }
+
+    .foto10 {
+        grid-area: foto10;
+    }
+
+    .foto11 {
+        grid-area: foto11;
+    }
+
+    .foto12 {
+        grid-area: foto12;
+    }
+
+    .foto13 {
+        grid-area: foto13;
+    }
+</style>
+
+<body>
+
+
+    <div class="container">
+        <div class="item foto1"><img src="../../img/fotos/balcon_hd.jpg"></div>
+        <div class="item foto2"><img src="../../img/fotos/restaurantete.jpeg"></div>
+        <div class="item foto3"><img src="../../img/fotos/playa_hd.jpg"></div>
+        <div class="item foto4"><img src="../../img/fotos/instalacion1.jpg"></div>
+        <div class="item foto5"><img src="../../img/fotos/instalacion3.jpg"></div>
+        <div class="item foto6"><img src="../../img/fotos/instalacion2.jpg"></div>
+        <div class="item foto7"><img src="../../img/fotos/comida.jpeg"></div>
+        <div class="item foto8"><img src="../../img/fotos/jardin.jpg"></div>
+        <div class="item foto9"><img src="../../img/fotos/terraza_completo.jpg"></div>
+        <div class="item foto10"><img src="../../img/fotos/baño_vertical.jpg"></div>
+        <div class="item foto11"><img src="../../img/fotos/baño_completo.jpg"></div>
+        <div class="item foto12"><img src="../../img/fotos/baño_horizontal.jpg"></div>
+        <div class="item foto13"><img src="../../img/fotos/baño_horizontal.jpg"></div>
+    </div>
+
+    <!-- 
+    
+    
+    
+     -->
+
+
+     <!-- <div class="accordion" id="accordionExample">
+        <div class="accordion-item">
+            <h2 class="accordion-header">
+                <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#colapse1" aria-expanded="true" aria-controls="colapse1">
+                    Habitaciones
+                </button>
+            </h2>
+            <div id="colapse1" class="accordion-collapse collapse show" data-bs-parent="#accordionExample">
+                <div class="accordion-body">
+                     Comienzo galeria de fotos -->
+
+                    <!-- Fin galeria de fotos -->
+                <!-- </div>
+            </div>
+        </div>
+     </div> --> 
+
+     <br/><br/><br/><h1>Presidencial</h1>
+     <div class="containerFotosHabitacionPresidencial">
+        <div class="item foto1"><img src="../../img/habitaciones/hab_presidencial/foto1.jpg"></div>
+        <div class="item foto2"><img src="../../img/habitaciones/hab_presidencial/foto2.jpg"></div>
+        <div class="item foto3"><img src="../../img/habitaciones/hab_presidencial/foto3.jpg"></div>
+        <div class="item foto4"><img src="../../img/habitaciones/hab_presidencial/foto4.jpg"></div>
+        <div class="item foto5"><img src="../../img/habitaciones/hab_presidencial/foto5.jpg"></div>
+        <div class="item foto6"><img src="../../img/habitaciones/hab_presidencial/foto6.jpg"></div>
+        <div class="item foto7"><img src="../../img/habitaciones/hab_presidencial/foto7.jpg"></div>
+        <div class="item foto8"><img src="../../img/habitaciones/hab_presidencial/foto8.jpg"></div>
+        <div class="item foto9"><img src="../../img/habitaciones/hab_presidencial/foto9.jpg"></div>
+        <div class="item foto10"><img src="../../img/habitaciones/hab_presidencial/foto10.jpg"></div>
+     </div>
+<br/><br/><br/><h1>Lujo</h1>
+     <div class="containerFotosHabitacionLujo">
+        <div class="item foto1"><img src="../../img/habitaciones/hab_lujo/foto1.jpg"></div>
+        <div class="item foto2"><img src="../../img/habitaciones/hab_lujo/foto2.jpg"></div>
+        <div class="item foto3"><img src="../../img/habitaciones/hab_lujo/foto3.jpg"></div>
+        <div class="item foto4"><img src="../../img/habitaciones/hab_lujo/foto4.jpg"></div>
+        <div class="item foto5"><img src="../../img/habitaciones/hab_lujo/foto5.jpg"></div>
+        <div class="item foto6"><img src="../../img/habitaciones/hab_lujo/foto6.jpg"></div>
+        <div class="item foto7"><img src="../../img/habitaciones/hab_lujo/foto7.jpg"></div>
+        <div class="item foto8"><img src="../../img/habitaciones/hab_lujo/foto8.jpg"></div>
+     </div>
+    
+<br/><br/><br/><h1>Comun</h1>
+     <div class="containerFotosHabitacionComun">
+        <div class="item foto1"><img src="../../img/habitaciones/hab_comun/foto1.jpg"></div>
+        <div class="item foto2"><img src="../../img/habitaciones/hab_comun/foto2.jpg"></div>
+        <div class="item foto3"><img src="../../img/habitaciones/hab_comun/foto3.jpg"></div>
+        <div class="item foto4"><img src="../../img/habitaciones/hab_comun/foto4.jpg"></div>
+        <div class="item foto5"><img src="../../img/habitaciones/hab_comun/foto5.jpg"></div>
+     </div>
+
+</body>
+
+</html>

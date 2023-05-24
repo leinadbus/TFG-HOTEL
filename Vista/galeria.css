@@ -1,0 +1,314 @@
+img {
+    width: 100%;
+    max-height: 100%;
+}
+
+.contenedor {
+    width: 100%;
+    /* Ajustar al ancho del contenedor */
+    height: 100%;
+    /* Ajustar al alto del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.contenedor img {
+    max-width: 100%;
+    /* La imagen no superará el ancho del contenedor */
+    max-height: 100%;
+    /* La imagen no superará el alto del contenedor */
+}
+
+/* LUPA */
+/* .contenedor>div {
+    position: relative;
+    display: inline-block;
+}
+
+.contenedor>div::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/search.png");
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.contenedor>div:hover::after {
+    background-color: rgb(38, 38, 38);
+    opacity: 0.56;
+} */
+/* .item>img {
+    max-width: 200px;
+}
+
+
+.itemCarosusel {
+    background-color: red;
+    // height: 30rem;
+} */
+
+.carousel {
+    max-width: 500px;
+    /* Ajustar el tamaño máximo del carrusel a 500px de ancho */
+    height: 600px;
+    /* Establecer la altura del carrusel a 600px */
+    margin: 0 auto;
+    /* Centrar el carrusel horizontalmente */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.carousel-item img {
+    max-width: 100%;
+    max-height: calc(100% - 40px);
+    /* Restar 40px para los márgenes superiores e inferiores */
+    object-fit: contain;
+    margin-top: 20px;
+    /* Ajustar el margen superior según tus preferencias */
+    margin-bottom: 0px;
+    /* Ajustar el margen inferior según tus preferencias */
+}
+
+/* Fin LUPA */
+
+/* div {
+    border: 1px solid peru;
+} */
+
+.containerFotosGym {
+    display: grid;
+    grid-template-areas:
+        "foto1 foto2 foto3 foto4 "
+    ;
+    grid-gap: 5px;
+}
+
+.containerFotosSpa {
+    display: grid;
+    grid-template-areas:
+        "foto1 foto2 "
+        "foto3 foto4 "
+    ;
+    grid-gap: 5px;
+}
+
+.containerFotosEventos {
+    display: grid;
+    grid-template-areas:
+        "foto1 foto2 foto3 foto4 foto5 "
+        "foto6 foto7 foto8 foto9 foto10"
+        "foto11 foto12 foto13 foto14 foto15"
+        "foto16 foto17 foto18 foto19 foto20"
+        "foto21 foto22 foto23 foto24 foto25"
+        "foto26 foto27 foto28 foto29 foto30"
+       
+    ;
+    grid-gap: 5px;
+}
+
+
+/* .containerFotosHabitacionComun {
+    display: grid;
+    /* grid-template-columns: repeat(5, 100em); */
+    /* grid-template-rows: 1.2fr 1.5fr 1fr; */
+    /* grid-template-rows: 10em 10em 10em;
+    grid-template-columns: 10em 10em 10em; 
+    grid-template-areas:
+        "foto1 foto2 foto3 foto4 foto5 "
+
+    ;
+
+
+    grid-gap: 5px;
+
+} */
+
+ .containerFotosHabitacionLujo {
+    display: grid;
+    /* grid-template-columns: repeat(5, 100em); */
+    /* grid-template-rows: 1.2fr 1.5fr 1fr; */
+    /* grid-template-rows: 10em 10em 10em; */
+    /* grid-template-columns: 10em 10em 10em; */
+    grid-template-areas:
+        "foto1 foto2 foto3 foto4 "
+        "foto5 foto6 foto7 foto8"
+
+    ;
+
+
+    grid-gap: 5px;
+
+} 
+
+ .containerFotosHabitacionPresidencial {
+    display: grid;
+    /* grid-template-columns: repeat(5, 100em); */
+    /* grid-template-rows: 1.2fr 1.5fr 1fr; */
+    /* grid-template-rows: 10em 10em 10em; */
+    /* grid-template-columns: 10em 10em 10em; */
+    grid-template-areas:
+        "foto1 foto2 foto3 foto4 foto5 "
+        "foto6 foto7 foto8 foto9 foto10"
+
+    ;
+
+
+    grid-gap: 5px;
+
+} 
+
+.containerCollageFotos {
+    display: grid;
+    /* grid-template-columns: repeat(12, 100em); */
+    /* grid-template-rows: 1.2fr 1.5fr 1fr; */
+    /* grid-template-rows: 10em 10em 10em;
+    grid-template-columns: 10em 10em 10em; */
+    grid-template-areas:
+        "foto1 foto1 foto1 foto2 foto2  foto2  foto3  foto3  foto3  foto4  foto4  foto4"
+        "foto5 foto5 foto5 foto5 foto6  foto6  foto6  foto6  foto7  foto7  foto7  foto7"
+        "foto8 foto8 foto9 foto9 foto10 foto10 foto11 foto11 foto12 foto12 foto13 foto13"
+    ;
+
+
+    grid-gap: 5px;
+
+}
+
+.item, .item2, .item3, .item4, .item5 {
+    background: #89ece1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.foto1 {
+    grid-area: foto1;
+}
+
+.foto2 {
+    grid-area: foto2;
+}
+
+.foto3 {
+    grid-area: foto3;
+}
+
+.foto4 {
+    grid-area: foto4;
+}
+
+.foto5 {
+    grid-area: foto5;
+}
+
+.foto6 {
+    grid-area: foto6;
+}
+
+
+.foto7 {
+    grid-area: foto7;
+}
+
+.foto8 {
+    grid-area: foto8;
+}
+
+.foto9 {
+    grid-area: foto9;
+}
+
+.foto10 {
+    grid-area: foto10;
+}
+
+.foto11 {
+    grid-area: foto11;
+}
+
+.foto12 {
+    grid-area: foto12;
+}
+
+.foto13 {
+    grid-area: foto13;
+}
+
+.foto14 {
+    grid-area: foto14;
+}
+
+.foto15 {
+    grid-area: foto15;
+}
+
+.foto16 {
+    grid-area: foto16;
+}
+
+.foto17 {
+    grid-area: foto17;
+}
+
+.foto18 {
+    grid-area: foto18;
+}
+
+.foto19 {
+    grid-area: foto19;
+}
+
+.foto20 {
+    grid-area: foto20;
+}
+
+.foto21 {
+    grid-area: foto21;
+}
+
+.foto22 {
+    grid-area: foto22;
+}
+
+.foto23 {
+    grid-area: foto23;
+}
+
+.foto24 {
+    grid-area: foto24;
+}
+
+.foto25 {
+    grid-area: foto25;
+}
+
+.foto26 {
+    grid-area: foto26;
+}
+
+.foto27 {
+    grid-area: foto27;
+}
+
+.foto28 {
+    grid-area: foto28;
+}
+
+.foto29 {
+    grid-area: foto29;
+}
+
+.foto30 {
+    grid-area: foto30;
+}

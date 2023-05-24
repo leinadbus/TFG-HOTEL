@@ -1,0 +1,187 @@
+img {
+    width: 100%;
+    max-height: 100%;
+}
+
+div img {
+    /* max-width: 100%; */
+    /* La imagen no superará el ancho del contenedor */
+    /* max-height: 100%; */
+    /* La imagen no superará el alto del contenedor */
+}
+
+
+.contenedor {
+    /* width: 100%; */
+    /* Ajustar al ancho del contenedor */
+    /* height: 100%; */
+    /* Ajustar al alto del contenedor */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.carousel-item  {
+    background-color: green;
+    max-height: 100%;
+}
+
+.contenedor img , .corouselImagenes {
+    /* max-width: 100%; */
+    /* La imagen no superará el ancho del contenedor */
+    /* max-height: 100%; */
+    /* La imagen no superará el alto del contenedor */
+}
+
+/* LUPA */
+/* .contenedor>div {
+    position: relative;
+    display: inline-block;
+}
+
+.contenedor>div::after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-image: url("../img/search.png");
+    background-repeat: no-repeat;
+    background-size: 50px 50px;
+    background-position: center;
+    opacity: 0;
+    transition: opacity 0.3s ease-in-out;
+}
+
+.contenedor>div:hover::after {
+    background-color: rgb(38, 38, 38);
+    opacity: 0.56;
+} */
+
+/* Fin LUPA */
+
+/* div {
+    border: 1px solid peru;
+} */
+
+
+.containerFotosHabitacionPresidencial {
+    display: grid;
+    grid-template-columns: repeat(10);
+    /* grid-template-columns: repeat(auto-fit, minmax(0, 1fr));
+    grid-auto-rows: 900px 200px; // Establece la altura de las filas
+    /* grid-template-rows: 2fr 1fr; */
+    grid-column-gap: 0px;
+    grid-row-gap: 9px;
+    grid-template-areas: 
+        "carousel carousel carousel carousel carousel carousel carousel carousel carousel carousel"
+        "foto1 foto2 foto3 foto4 foto5 foto6 foto7 foto8 foto9 foto10 "
+        ;
+}
+
+ .carousel-item > img {
+    margin-top: 0px;
+    max-height: 30rem !important;
+}
+
+
+
+.containerFotosHabitacionLujo {
+    display: grid;
+    grid-template-columns: repeat(8);
+    /* grid-template-rows: 2fr 1fr; */
+    grid-column-gap: 0px;
+    grid-row-gap: 9px;
+    grid-template-areas: 
+        "carousel carousel carousel carousel carousel carousel carousel carousel "
+        "foto1 foto2 foto3 foto4 foto5 foto6 foto7 foto8 "
+        ;
+}
+
+.containerFotosHabitacionComun {
+    display: grid;
+    grid-template-columns: repeat(5);
+    /* grid-template-rows: 2fr 1fr; */
+    grid-column-gap: 0px;
+    grid-row-gap: 9px;
+    grid-template-areas: 
+        "carousel carousel carousel carousel carousel "
+        "foto1 foto2 foto3 foto4 foto5 "
+        ;
+}
+
+
+
+button {
+    border: none;
+}
+
+.item {
+    background: #89ece1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.corouselImagenes {
+    grid-area: carousel;
+}
+
+.foto1 {
+    grid-area: foto1;
+}
+
+.foto2 {
+    grid-area: foto2;
+}
+
+.foto3 {
+    grid-area: foto3;
+}
+
+.foto4 {
+    grid-area: foto4;
+}
+
+.foto5 {
+    grid-area: foto5;
+}
+
+.foto6 {
+    grid-area: foto6;
+}
+
+.foto1 {
+    grid-area: foto1;
+}
+
+.foto7 {
+    grid-area: foto7;
+}
+
+.foto8 {
+    grid-area: foto8;
+}
+
+.foto9 {
+    grid-area: foto9;
+}
+
+.foto10 {
+    grid-area: foto10;
+}
+
+.foto11 {
+    grid-area: foto11;
+}
+
+.foto12 {
+    grid-area: foto12;
+}
+
+.foto13 {
+    grid-area: foto13;
+}   
