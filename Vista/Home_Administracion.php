@@ -16,21 +16,28 @@
             // include '../Controlador/controlador_admin.php';
     ?>
     <h1>Home Administración</h1>
-    <form method="post">
-    <button name="btn_aniadir_Admin" class="btn">Añadir Administrador</button>
-    <button name="btn_eliminar_Admin" class="btn" >Administradores</button>
-    <button name="btn_anadir_estancia" class="btn" >Añadir Estancia</button>
-    <!-- <button name="btn_anadir_habitacion" class="btn" >Añadir Habitación</button> -->
-    <!-- <button name="btn_anadir_sala" class="btn">Añadir Sala</button> -->
-    <button name="btn_ver_habitaciones" class="btn">Ver habitaciones</button>
-    <button name="btn_ver_salas" class="btn">Ver salas</button>
-    <button name="btn_reserva_admin" class="btn">Hacer reserva</button>
-    </form>
-
-    <!-- <p>Hacer reserva</p>
-    <p>Cancelar Reserva</p> -->
-
     
+    <form method="post">
+        <div class="btn-group btn-group-lg" role="group" aria-label="Button group with nested dropdown">
+            <button name="btn_aniadir_Admin" class="btn btn-secondary">Añadir Administrador</button>
+            <button name="btn_eliminar_Admin" class="btn btn-secondary" >Administradores</button>
+
+            <div class="btn-group" role="group">
+                <button name="btn_anadir_estancia" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  id="btnGroupDrop1">
+                    Añadir Estancia
+                </button>
+                    <div class="dropdown-menu" aria-labelledby="btnGroupDrop1">
+                        <button name="reserva_habitacion_admin" class="btn-group">Reservar habitación</button>
+                        <button name="reserva_sala_admin" class="btn-group" >Reservar sala</button>
+                    </div>
+            </div>
+            
+            <button name="btn_ver_habitaciones" class="btn btn-secondary">Ver habitaciones</button>
+            <button name="btn_ver_salas" class="btn btn-secondary">Ver salas</button>
+            <button name="btn_reserva_admin" class="btn btn-secondary">Hacer reserva</button>
+            <button name="btn_reserva_admin" class="btn btn-secondary">Buscar cliente</button>
+        </div>
+    </form>
 
 </body>
 </html>
