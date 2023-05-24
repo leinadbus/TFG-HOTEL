@@ -18,79 +18,149 @@
 
 <h1>Nueva Habitación</h1>
 <form method="post">
-        <label for="cod_estancia">Código de Estancia:</label>
-        <input type="number" name="cod_estancia" id="">
+        <div class="form-group row">
+                <label for="tipoHabitacion" class="col-sm-2 col-form-label col-form-label-lg">Tipo:</label>
+                <div class="col-sm-10">
+                    <select name="tipo" id="tipoHabitacion" onclick="actualizarCampos()"  class="form-control form-control-lg">
+                        <option value="comun" selected>Común</option>
+                        <option value="lujo">Lujo</option>
+                        <option value="presidencial">Presidencial</option>
+                    </select>
+                </div>
+        </div>
+ 
 <br>
-        <label for="descripcion">Descripción:</label>
-        <input type="text" name="descripcion" id="">
+        <div class="form-group row">
+                <label for="precioHabitacion" class="col-sm-2 col-form-label col-form-label-lg">Precio:</label>
+                <div class="col-sm-10">
+                    <input  type="number" name="precio" id="precioHabitacion" class="form-control form-control-lg">
+                </div>
+        </div>
+<br>
+        <div class="form-group row">
+            <label for="descripcion" class="col-sm-2 col-form-label col-form-label-lg">Descripción:</label>
+                <div class="col-sm-10">
+                    <textarea class="form-control form-control-lg" name="descripcion" id="descripcionHabitacion" rows="3" ></textarea>
+                <!-- <input type="text" rows="4" cols="50" name="descripcion" id="descripcionHabitacion"> -->
+                </div>
+        </div>
+<br>
+        <div class="form-group row">
+            <label for="num_camas" class="col-sm-2 col-form-label col-form-label-lg">Número de camas:</label>
+                <div class="col-sm-10">
+                    <select name="num_camas" class="form-control form-control-lg">
+                        <option value="1">1</option>
+                        <option value="2">2</option>
+                    </select>
+                </div>
+        </div>
         <br>
-        <label for="ubicacion">Ubicación:</label>
-        <select name="ubicacion">
-            <option value="interior">Interior</option>
-            <option value="exterior">Exterior</option>
-            <option value="azotea">Azotea</option>
-        </select>
-        <br>
-        <label for="planta">Planta:</label>
-        <select name="planta">
-            <option value="0">Planta 0</option>
-            <option value="1">Planta 1</option>
-            <option value="2">Planta 2</option>
-            <option value="3">Planta 3</option>
-            <option value="4">Planta 4</option>
-            <option value="5">Planta 5</option>
-            <option value="6">Planta 6</option>
-            <option value="7">Planta 7</option>
-        </select>
-        <br>
-        <label for="tipo">Tipo:</label>
-        <select name="tipo">
-            <option value="comun">Común</option>
-            <option value="lujo">Lujo</option>
-            <option value="presidencial">Presidencial</option>
-        </select>
-        <br>
-        <label for="precio">Precio:</label>
-        <input type="number" name="precio" id="">
-        <br>
-       
-        <!-- Valores ocultos para construir el objeto -->
-        <label for="localidad">Localidad:</label>
-        <select name="localidad" >
-             <option value="madrid" selected>Madrid</option>
-        </select>
-        <input type="hidden" name="estado" value="libre">
-            <br>
-        <!-- <input type="submit" name="btnNuevaEstancia" id=""> -->
-    <!-- </form>
-    <form method="post"> -->
-        
-        <label for="cod_habitacion">Código de Habitación:</label>
-        <input type="number" name="cod_habitacion" id="">
-        <br>
-        <!-- <label for="cod_estancia">Código de Estancia:</label> -->
-        <!-- <select name="cod_estancia">
-        <?php
-        // foreach ($estanciasDisponibles as $key) {
-        //    echo "<option value='$key->cod_estancia'>".$key->cod_estancia."</option>";
-        // }
-        ?>
-        </select> -->
-        <!-- <br> -->
-        <label for="num_camas">Número de camas:</label>
-        <select name="num_camas">
-            <option value="1">1</option>
-            <option value="2">2</option>
-        </select>
-        <br>
-        <label for="tipo_baño">Tipo de baño:</label>
-        <select name="tipo_bano">
-            <option value="bañera">Bañera</option>
-            <option value="ducha">Plato de ducha</option>
-            <option value="jacuzzi">Jacuzzi</option>
-        </select>
-        <br>
-        <input type="submit" name="btnNuevaHabitacion" id="">
+        <div class="form-group row">
+            <label for="tipo_bano" class="col-sm-2 col-form-label col-form-label-lg">Tipo de baño:</label>
+                <div class="col-sm-10">
+                    <select name="tipo_bano" class="form-control form-control-lg">
+                        <option value="bañera">Bañera</option>
+                        <option value="ducha">Plato de ducha</option>
+                        <option value="jacuzzi">Jacuzzi</option>
+                    </select>
+                </div>
+        </div>
+
+<br>
+
+        <div class="form-group row">
+            <label for="cod_estancia" class="col-sm-2 col-form-label col-form-label-lg">Código de Estancia:</label>
+                <div class="col-sm-10">
+                    <input type="number" name="cod_estancia" id="cod_estancia" class="form-control form-control-lg">
+                </div>
+        </div>
+
+<br>
+
+        <div class="form-group row">
+            <label for="ubicacion" class="col-sm-2 col-form-label col-form-label-lg">Ubicación:</label>
+                <div class="col-sm-10">
+                    <select name="ubicacion" class="form-control form-control-lg">
+                        <option value="interior">Interior</option>
+                        <option value="exterior">Exterior</option>
+                        <option value="azotea">Azotea</option>
+                    </select>
+                </div>
+        </div>
+
+<br>
+        <div class="form-group row">
+            <label for="planta" class="col-sm-2 col-form-label col-form-label-lg">Planta:</label>
+                <div class="col-sm-10">
+                    <select name="planta" class="form-control form-control-lg">
+                        <option value="0">Planta 0</option>
+                        <option value="1">Planta 1</option>
+                        <option value="2">Planta 2</option>
+                        <option value="3">Planta 3</option>
+                        <option value="4">Planta 4</option>
+                        <option value="5">Planta 5</option>
+                        <option value="6">Planta 6</option>
+                        <option value="7">Planta 7</option>
+                    </select>
+                </div>
+        </div>
+
+<br>
+        <div class="form-group row">
+            <label for="localidad" class="col-sm-2 col-form-label col-form-label-lg">Localidad:</label>
+                <div class="col-sm-10">
+                    <select name="localidad" class="form-control form-control-lg">
+                        <option value="madrid" selected>Madrid</option>
+                    </select>
+            </div>
+        </div>
+
+<br>
+        <div class="form-group row">
+            <label for="cod_habitacion" class="col-sm-2 col-form-label col-form-label-lg">Código de Habitación:</label>
+                <div class="col-sm-10">
+                    <input type="number" name="cod_habitacion" id="cod_habitacion" class="form-control form-control-lg">
+                </div>
+        </div>
+<br>
+         <!-- Valores ocultos para construir el objeto -->
+         <input type="hidden" name="estado" value="libre">
+
+        <input type="submit" name="btnNuevaHabitacion" id="" class="btn btn-primary btn-lg btn-block">
     </form>
+
+
+    <script>
+        function actualizarCampos() {
+            const tipoHabitacion = document.getElementById('tipoHabitacion');
+            const precioHabitacion = document.getElementById('precioHabitacion');
+            const descripcionHabitacion = document.getElementById('descripcionHabitacion');
+
+            const tipoSeleccionado = tipoHabitacion.value;
+
+            if (tipoSeleccionado === 'presidencial') {
+
+            precioHabitacion.value = 1500;
+            descripcionHabitacion.value = 'Nuestras habitaciones presidenciales son el lujo en su máximo esplendor';
+
+            } else if (tipoSeleccionado === 'lujo') {
+
+                precioHabitacion.value = 1350;
+                descripcionHabitacion.value = 'El lujo es todo lo que necesitas';
+
+            } else if (tipoSeleccionado === 'comun') {
+
+                precioHabitacion.value = 961;
+                descripcionHabitacion.value = 'Como dice Opra, en lo sencillo está el verdadero lujo';
+                
+            } else {
+
+            precioHabitacion.value = '';
+            descripcionHabitacion.value = '';
+
+            }
+        }
+
+</script>
 </body>
 </html>

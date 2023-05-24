@@ -49,7 +49,7 @@
                 <td>". $x->descripcion ."</td>
                 <td>". $x->localidad ."</td>
                 <td>". $x->cod_estancia ."</td>
-                <td><form method='post'> <button name=sinAccion value='$x->cod_sala]'>Reservar</button></form></td>
+                <td><form method='post'> <button name=sinAccion value='$x->cod_sala]'>Habilitar/Deshabilitar</button></form></td>
                 <td><form method='post'> <button name=sinAccion value='$x->cod_sala]'>Borrar</button></form></td>
                 <td><form method='post'> <button name=sinAccion value='$x->cod_sala]'>Modificar</button></form></td>
                 </tr>";

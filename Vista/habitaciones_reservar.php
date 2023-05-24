@@ -58,10 +58,19 @@
     foreach ($registro as $x) {
         echo "
         <div class='col'>
-            <div class='card mb-3  bg-light '   style='width: 25rem; '>
-            <img src='../img/fotos/cuarto_completo.jpg' class='card-img-top alt='Imagen de Tarjeta'>
+            <div class='card mb-3  bg-light '   style='width: 25rem;'>";
+            if($x->tipo_estancia == "comun"){
+                echo "<img src='../img/fotos/hab3_1.jpg' class='card-img-top' alt='Imagen de Tarjeta'>";
+            } else if($x->tipo_estancia == "lujo"){
+                echo "<img src='../img/fotos/hab2.jpg' class='card-img-top alt='Imagen de Tarjeta'>";
+            }else if($x->tipo_estancia == "presidencial"){
+                echo "<img src='../img/habitaciones/hab_presidencial/foto2.jpg' class='card-img-top alt='Imagen de Tarjeta'>";
+            }
+            // <img src='../img/fotos/cuarto_completo.jpg' class='card-img-top alt='Imagen de Tarjeta'>
+
+            echo "
                 <div class='card-body'>
-                <h4 style='display:inline;'>Tipo:</h4><h2 style='display:inline;'> " . ucwords($x->tipo_estancia) . "</h2>
+                <h4 class='card-title' style='display:inline;'>Tipo:</h4><h2 class='card-title' style='display:inline;'> " . ucwords($x->tipo_estancia) . "</h2>
                 <h4 style='color: green;'>" . $x->precio . "€/noche</h4>
                 <p class='card-text'>" .  $x->descripcion . "
                 </p>
