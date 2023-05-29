@@ -32,9 +32,28 @@ include '../Controlador/controlador_sesion.php';
                     <label for="fechaSalida">Fecha Salida</label>
                     <input type="date"  class="form-control" id="fechaSalida" name="datoFechaFin" required>
                 </div>
+                <!-- <div class="form_reserva col">
+                    <label for="tipoEstancia">Tipo de habitación:</label> -->
+                    <!-- <input type="date"  class="form-control" id="fechaSalida" name="datoFechaFin" required> -->
+                    <!-- <select name="tipoEstancia" class="form-control">
+                        <option value="todas" selected>Todas</option>
+                        <option value="comun">Estándar</option>
+                        <option value="lujo">Lujo</option>
+                        <option value="presidencial">Presidencial</option>
+                    </select>
+                </div> -->
+
+                <!-- <div class="form_reserva col">
+                    <label for="nAdultos">Nº Habitaciones:</label><br />
+                    <input type="number" class="form-control" name="cantidadHabitaciones" id="cantidadHabitaciones" min="1" max="5" value="1" required>
+                </div> -->
 
                 <!-- <div class="form_reserva col"> -->
                     <!-- <label for="nAdultos">Adultos</label><br /> -->
+                    <input type="hidden" class="form-control" name="cantidadHabitaciones" id="cantidadHabitaciones" value="500" required>
+
+                    <input type="hidden" class="form-control" name="tipoEstancia" id="nAdultos"  value="todas" required>
+
                     <input type="hidden" class="form-control" name="adultos" id="nAdultos" min="1" max="5" value="1" required>
                 <!-- </div>
 

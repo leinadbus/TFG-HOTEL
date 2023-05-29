@@ -18,7 +18,7 @@ include '../Controlador/controlador_carrito.php';
 <h2 class="mt-4 mb-4">Seleccione los extras de las habitaciones:</h2>
 <form id="formulario" class="shadow p-3 mb-5 bg-body rounded" method="post">
   <div>
-    <h5>Late CheckOut +20€ x habitación:</h5>
+    <h5>Late CheckOut +20€/habitación:</h5>
     <div class="form-check form-check-inline">
       <input type="radio" id="lateCheckOutNo" name="lateCheckOut" value="No" class="form-check-input" checked>
       <label for="lateCheckOutNo" class="form-check-label">No</label>

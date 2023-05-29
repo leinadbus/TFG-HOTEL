@@ -19,9 +19,14 @@
     
     <form method="post">
         <div class="btn-group btn-group-lg" role="group" aria-label="Button group with nested dropdown">
+            <?php
+                if($_SESSION['nom_Usuario'] =="Administrador" ){
+            ?>
             <button name="btn_aniadir_Admin" class="btn btn-secondary">Añadir Administrador</button>
             <button name="btn_eliminar_Admin" class="btn btn-secondary" >Administradores</button>
-
+            <?php
+            }
+            ?>
             <div class="btn-group" role="group">
                 <button name="btn_anadir_estancia" class="btn btn-secondary dropdown-toggle" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false"  id="btnGroupDrop1">
                     Añadir Estancia

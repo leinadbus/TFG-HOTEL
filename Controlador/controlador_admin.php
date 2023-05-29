@@ -101,6 +101,12 @@ if (isset($_REQUEST['btnNuevaSala'])) {
         echo "Sala creada";
     }
  }
+
+ if(isset($_REQUEST['cambiarEstadoHabitacion'])) {
+    $estadoHabitacion = $_POST['cambiarEstadoHabitacion'];
+    // echo $estadoHabitacion; 
+    $habitacionGeneral->cambiarEstadoHabitación($estadoHabitacion);
+ }
 //  if (isset($_REQUEST['btnNuevaSala'])) {
 //     $nuevaSala = new Sala($_POST['cod_estancia'],'','','','','','','','',$_POST['cod_Sala'],$_POST['aforo'],$_POST['tipo_Sala']);
 //     if($nuevaSala->crearSala()){

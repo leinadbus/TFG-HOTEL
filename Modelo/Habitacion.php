@@ -44,18 +44,24 @@
                 <td>". $x->cod_habitacion . "</td>
                 <td>". $x->tipo_estancia . "</td>
                 <td>". $x->precio ."€</td>
-                <td>". $x->planta . "</td>
-                <td>". $x->estado ."</td>
+                <td>". $x->planta . "</td>" ; 
+                if ($x->estado == 'libre') {
+                    echo "<td>Disponible</td>";
+                }
+                 else echo "<td>Indispuesta</td>"; 
+                // <td>". $x->estado ."</td>
+                 echo "
                 <td>". $x->num_camas ."</td>
                 <td>". $x->tipo_bano ."</td>
                 <td>". $x->ubicacion ."</td>
                 <td>". $x->descripcion ."</td>
                 <td>". $x->localidad ."</td>
                 <td>". $x->cod_estancia ."</td>
-                <td><form method='post'> <button name=sinAccion value='$x->cod_habitacion]'>Habilitar/Deshabilitar</button></form></td>
-                <td><form method='post'> <button name=sinAccion value='$x->cod_habitacion]'>Borrar</button></form></td>
-                <td><form method='post'> <button name=sinAccion value='$x->cod_habitacion]'>Modificar</button></form></td>
+                <td><form method='post'> <button name=cambiarEstadoHabitacion value='$x->cod_estancia'>Habilitar/Deshabilitar</button></form></td>
+            
                 </tr>";
+                // <td><form method='post'> <button name=sinAccion value='$x->cod_habitacion]'>Borrar</button></form></td>
+                // <td><form method='post'> <button name=sinAccion value='$x->cod_habitacion]'>Modificar</button></form></td>
             }
         }  catch (PDOException $e) {
             echo "<br/>ERROR AL OBTENER TODOS " . $e->getMessage();
@@ -131,7 +137,29 @@
             }
         }
 
-
+        /*
+        Función que cambia el estado de la habitación de libre a ocupado y viceversa
+        Hago una consulta a la bd con el codigo, saco el estado, si es uno lo cambio si es otro tambien con un update
+        */
+        function cambiarEstadoHabitación( $cod_estancia)
+        {
+            try {
+                $cone = $this->conexion;
+                $registro = $this->obtenerIdHabitacionConEstancia($cod_estancia);
+                $estado = $registro[0]['estado'];
+                    if( $estado == 'libre'){
+                        $sql = "UPDATE estancia SET estado='ocupado' WHERE cod_estancia='$cod_estancia'";
+                        $cone->exec($sql);
+                    }else {
+                        $sql = "UPDATE estancia SET estado='libre' WHERE cod_estancia='$cod_estancia'";
+                        $cone->exec($sql);
+                    }
+                // $sql = "UPDATE " . self::$TABLA . " SET num_camas='$numCamas', tipo_bano='$tipoBano', cod_estancia='$cod_estancia' WHERE cod_habitacion='$cod_habitacion'";
+                // echo "<br/>modificado habitacion";
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL MODIFICAR HABITACION " . $e->getMessage();
+            }
+        }
 
         /*
             getter y setter magico

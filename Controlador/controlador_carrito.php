@@ -5,7 +5,7 @@ require_once "../Modelo/usuario.php";
 
 $habitacion = new Habitacion('','','','','','','','','','','','');
 $reserva = new Reserva();
-$_SESSION['arrayhabitaciones']= [];
+// $_SESSION['arrayhabitaciones']= [];
 
   if (isset($_POST['btn_enviar_reservas'])){
       if (!empty($_POST['producto'])) {
@@ -28,13 +28,21 @@ $_SESSION['arrayhabitaciones']= [];
             $arrayHabitaciones[$producto]=$habi[0]['precio'];
 
             $precioTotal =  $precioTotal + ($habi[0]['precio']);
-          
+            echo "<p style='text-align: center; font-size: 25px; border-radius: 10px; padding: 10px; background-color: #f2f2f2;'>";
+            echo "Habitación nº: " . $vueltas . " precio de la habitación: " . $habi[0]['precio'] . "€<br>";
+            echo "</p>";
             $vueltas++;
         }
+        echo "<p style='text-align: center; font-size: 25px; border-radius: 10px; padding: 10px; background-color: #f2f2f2;'>";
+        echo "<b>Precio total: " . $precioTotal . "€/nº días: " . $_SESSION['arrayReserva']['numeroDias'] . " = ";
         // Multiplicamos el total del precio de las habitaciones de un solo dia por el numero total de dias:
         $precioTotal =  $precioTotal* $_SESSION['arrayReserva']['numeroDias'];
+        echo $precioTotal . "€";
+        echo "</b></p>";
+        // print_r($arrayHabitaciones);
         // Introducimos el array provisional en el de sesion para poder recuperarlo en el futuro
         $_SESSION['arrayhabitaciones']=$arrayHabitaciones;
+        // print_r($_SESSION['arrayhabitaciones']);
 
       } else {
         echo "No se ha seleccionado ningúna habitación.";
@@ -51,7 +59,7 @@ $_SESSION['arrayhabitaciones']= [];
     $_SESSION['arrayReserva']=$arrayRecuperaCarrito;
             
             // print_r($_SESSION['arrayReserva']);
-            // print_r($_SESSION['arrayhabitaciones']);
+            //  print_r($_SESSION['arrayhabitaciones']);
     
   } else if (isset($_REQUEST['enviar_Pago'])) {
     $arrayRecuperaCarrito = $_SESSION['arrayReserva'];
@@ -71,7 +79,7 @@ $_SESSION['arrayhabitaciones']= [];
           //  echo "<br>";
 
     $informacionUsuario = $usuarioPrueba->obtieneInfoUsuario($_SESSION['correo_Usuario']);
-
+    // print_r($_SESSION['arrayhabitaciones']);
         // print_r($informacionUsuario);
         // echo "<br>";
         // echo $informacionUsuario[0]->nombre;

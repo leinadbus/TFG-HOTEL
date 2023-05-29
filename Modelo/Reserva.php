@@ -24,31 +24,62 @@
 
                 $fechaInicio =  $_POST['datoFechaInicio'];
                 $fechaFin = $_POST['datoFechaFin'];
-
+                $tipo = $_POST['tipoEstancia'];
+                $numeroHabitaciones = $_POST['cantidadHabitaciones'];
+               
+            
                 $cone = $this->conexion;
-                $sql = "SELECT *
-                FROM habitacion, estancia
-                WHERE habitacion.cod_estancia = estancia.cod_estancia AND habitacion.cod_estancia NOT IN (
-                    SELECT cod_estancia 
-                    FROM reserva
-                    WHERE fecha_inicio BETWEEN :A AND :B
-                    OR fecha_fin BETWEEN :C AND :D
-                    OR fecha_inicio < :E AND fecha_fin > :F 
-                ) ORDER BY tipo_estancia;";
-                $stmt = $cone->prepare($sql);
-                $stmt->bindParam(':A', $fechaInicio);
-                $stmt->bindParam(':B', $fechaFin);
-                $stmt->bindParam(':C', $fechaInicio);
-                $stmt->bindParam(':D', $fechaFin);
-                $stmt->bindParam(':E', $fechaInicio);
-                $stmt->bindParam(':F', $fechaFin);
+
+                if ( $tipo == 'todas'){
+
+                    $sql = "SELECT *
+                    FROM habitacion, estancia
+                    WHERE habitacion.cod_estancia = estancia.cod_estancia AND estancia.estado = 'libre' AND habitacion.cod_estancia NOT IN (
+                        SELECT cod_estancia 
+                        FROM reserva
+                        WHERE fecha_inicio BETWEEN :A AND :B
+                        OR fecha_fin BETWEEN :C AND :D
+                        OR fecha_inicio < :E AND fecha_fin > :F 
+                    ) ORDER BY tipo_estancia LIMIT $numeroHabitaciones ;";
+
+                    $stmt = $cone->prepare($sql);
+                    $stmt->bindParam(':A', $fechaInicio);
+                    $stmt->bindParam(':B', $fechaFin);
+                    $stmt->bindParam(':C', $fechaInicio);
+                    $stmt->bindParam(':D', $fechaFin);
+                    $stmt->bindParam(':E', $fechaInicio);
+                    $stmt->bindParam(':F', $fechaFin);
+                   
+
+                } else {
+
+                    $sql = "SELECT *
+                    FROM habitacion, estancia
+                    WHERE habitacion.cod_estancia = estancia.cod_estancia AND estancia.tipo_estancia LIKE :G  AND habitacion.cod_estancia NOT IN (
+                        SELECT cod_estancia 
+                        FROM reserva
+                        WHERE fecha_inicio BETWEEN :A AND :B
+                        OR fecha_fin BETWEEN :C AND :D
+                        OR fecha_inicio < :E AND fecha_fin > :F 
+                    ) ORDER BY tipo_estancia LIMIT $numeroHabitaciones ;";
+                    $stmt = $cone->prepare($sql);
+                    $stmt->bindParam(':A', $fechaInicio);
+                    $stmt->bindParam(':B', $fechaFin);
+                    $stmt->bindParam(':C', $fechaInicio);
+                    $stmt->bindParam(':D', $fechaFin);
+                    $stmt->bindParam(':E', $fechaInicio);
+                    $stmt->bindParam(':F', $fechaFin);
+                    $stmt->bindParam(':G', $tipo);
+                    
+                }
 
                 $stmt->execute();
 
                 $resultado = $stmt->fetchAll(PDO::FETCH_OBJ);
                 return $resultado;
             } catch (PDOException $e) {
-                echo "<br/>ERROR AL OBTENER TODOS " . $e->getMessage();
+                echo "<br/>ERROR AL OBTENER TODOS " . $e->getMessage() ;
+                // echo $stmt->queryString;
             }
         }
 

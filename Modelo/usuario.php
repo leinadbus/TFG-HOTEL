@@ -182,10 +182,15 @@
                         <td>". $x->primer_apellido . "</td>
                         <td>". $x->segundo_apellido ."</td>
                         <td>". $x->telefono . "</td>
-                        <td>". $x->correo ."</td>
-                        
-                        <td><form method='post'> <button name=borrarAdmin value='$x->cod_usuario]'>Borrar</button></form></td>
-                        </tr>";
+                        <td>". $x->correo ."</td>";
+                        if( $x->correo != "contacto@imperialretreat.com"){
+                            echo " <td><form method='post'> <button name=borrarAdmin value='$x->cod_usuario]'>Borrar</button></form></td>
+                            </tr>";
+                        } else {
+                            echo " <td><form method='post'> <button name=borrarAdmin value='$x->cod_usuario]' disabled>Borrar</button></form></td>
+                            </tr>";
+                        }
+                       
                     }
 
             } catch (PDOException $e) {

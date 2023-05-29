@@ -121,7 +121,11 @@ if(isset($_REQUEST['btn_Administracion'])){
     
     include '../Vista/factura_reserva_admin.php';
     
-  } else{
+  }  else if (isset($_REQUEST['cambiarEstadoHabitacion'])) {
+    
+    include '../Vista/Home_Administracion.php';
+    
+  }else{
     
     include '../Vista/Home_principal.php';
     
@@ -144,5 +148,11 @@ if(isset($_REQUEST['btn_Administracion'])){
 //  btn_enviar_datos_cliente
 
 // terminar_reserva_admin
+// btn_ver_habitaciones
+
+// bton_formulario_principal
+// btn_enviar_reservas
+// btn_enviar_extras
+// cambiarEstadoHabitacion
 ?>
 

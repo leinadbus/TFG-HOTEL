@@ -33,20 +33,34 @@
                 <label for="fechaSalida">Fecha Salida</label>
                 <input type="date" id="fechaSalida" name="datoFechaFin" value=<?= $fechaFinFormateada ?> class="form-control"> 
             </div>
-            <div class="col">
+            <div class="form_reserva col">
+                <label for="tipoEstancia">Tipo de habitación:</label>
+                <select name="tipoEstancia" class="form-control">
+                    <option value="todas" <?php echo ($tipo == 'todas') ? 'selected' : ''; ?>>Todas</option>
+                    <option value="comun" <?php echo ($tipo == 'comun') ? 'selected' : ''; ?>>Estándar</option>
+                    <option value="lujo" <?php echo ($tipo == 'lujo') ? 'selected' : ''; ?>>Lujo</option>
+                    <option value="presidencial" <?php echo ($tipo == 'presidencial') ? 'selected' : ''; ?>>Presidencial</option>
+                </select>
+            </div>
+
+            <div class="form_reserva col">
+                <label for="nAdultos">Nº Habitaciones:</label><br />
+                <input type="number" class="form-control" name="cantidadHabitaciones" id="cantidadHabitaciones" min="1" max="5" value="<?=$numHabitaciones?>" required>
+            </div>
+            <!-- <div class="col">
                 <label for="nAdultos">Adultos</label>
                 <input type="number" name="adultos" id="nAdultos" value='<?= $numPersonas?>' class="form-control" min="1" max="5">
             </div>
             <div class="col">
                 <label for="nNiños">Niños (menores 13 años)</label>
                 <input type="number" name="niños" id="nNiños" value='<?= $numNiños?>' class="form-control"  min="0" max="5">
-            </div>
+            </div> -->
             <div class="col">
-                <input class="btn btn-primary btn-custom" type="submit" class="submi" name="btn_cambio_parametros" >
+                <input class="btn btn-primary btn-custom" type="submit" class="submi" name="btn_cambio_parametros" value="Actualizar">
             </div>
        
         
-        <h4><?= $diff->days?> Noches de estancia  </h4><h4> <?=$numHabitaciones?> habitaciones necesarias</h4>
+        <h4><?= $diff->days?> Noches de estancia  </h4><h4> <?=$numHabitaciones?> habitaciones solicitadas</h4>
         </div>
     </form>
 

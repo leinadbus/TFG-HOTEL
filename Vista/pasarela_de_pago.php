@@ -28,8 +28,7 @@
             border: none;
             transition: 0.5s;
             background-size: 200% auto;
-            
-
+             
         }
         #enviarPago:hover {
             background-position: right center;

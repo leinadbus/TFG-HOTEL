@@ -11,10 +11,10 @@ require_once '../Modelo/Reserva.php';
 
 
   //Calculo de numero de habitaciones necesarias
-  $numPersonas = (int)$_POST['adultos'];
-  $numNiños = (int)$_POST['niños'];
-  $numHabitaciones = ceil(($numPersonas + $numNiños) / 2);
-
+  // $numPersonas = (int)$_POST['adultos'];
+  // $numNiños = (int)$_POST['niños'];
+  $numHabitaciones = $_POST['cantidadHabitaciones'];
+  $tipo = $_POST['tipoEstancia'];
   // Volvemos a recoger las fechas para poder mostrarlas en el formulario por si el usuario quiere cambiarlas
   $fechaInicioFormateada = date('Y-m-d', strtotime($_POST['datoFechaInicio'])) ;
   $fechaFinFormateada = date('Y-m-d', strtotime($_POST['datoFechaFin']));
@@ -28,8 +28,8 @@ require_once '../Modelo/Reserva.php';
     "fechaFin" => $fechaFinFormateada,
     "numeroDias" => $diff->days,
     "numeroHabitaciones" => $numHabitaciones,
-    "numeroPersonas" => $numPersonas,
-    "numeroNiños" => $numNiños,
+    // "numeroPersonas" => $numPersonas,
+    // "numeroNiños" => $numNiños,
   );
 
   $_SESSION['arrayReserva']=$arrayDeDatos;

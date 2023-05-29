@@ -58,16 +58,32 @@
             <div class="container formularioReserva  bg-secondary text-white form-group row">
                 <!-- <form method="post"> -->
                 <div class="form_reserva col">
-                    <label for="fechaEntrada">Fecha entrada</label>
+                    <label for="fechaEntrada">Fecha entrada:</label>
                     <input type="date" class="form-control" id="fechaEntrada" name="datoFechaInicio" required>
                 </div>
 
                 <div class="form_reserva col">
-                    <label for="fechaSalida">Fecha Salida</label>
+                    <label for="fechaSalida">Fecha Salida:</label>
                     <input type="date"  class="form-control" id="fechaSalida" name="datoFechaFin" required>
                 </div>
 
                 <div class="form_reserva col">
+                    <label for="tipoEstancia">Tipo de habitación:</label>
+                    <!-- <input type="date"  class="form-control" id="fechaSalida" name="datoFechaFin" required> -->
+                    <select name="tipoEstancia" class="form-control">
+                        <option value="todas" selected>Todas</option>
+                        <option value="comun">Estándar</option>
+                        <option value="lujo">Lujo</option>
+                        <option value="presidencial">Presidencial</option>
+                    </select>
+                </div>
+
+                <div class="form_reserva col">
+                    <label for="nAdultos">Nº Habitaciones:</label><br />
+                    <input type="number" class="form-control" name="cantidadHabitaciones" id="cantidadHabitaciones" min="1" max="5" value="1" required>
+                </div>
+
+                <!-- <div class="form_reserva col">
                     <label for="nAdultos">Adultos</label><br />
                     <input type="number" class="form-control" name="adultos" id="nAdultos" min="1" max="5" value="1" required>
                 </div>
@@ -75,10 +91,10 @@
                 <div class="form_reserva col">
                     <label for="nNiños">Niños (menores 13 años)</label>
                     <input type="number" class="form-control" name="niños" id="nNiños"  min="0" max="5" value="0" required>
-                </div>
+                </div> -->
 
                 <div class="form_reserva col">
-                    <input class="btn btn-primary btn-custom" type="submit" class="submi" name="bton_formulario_principal">
+                    <input class="btn btn-primary btn-custom" type="submit" class="submi" name="bton_formulario_principal" value="Buscar">
                 </div>
                 <!-- </form> -->
             </div>
