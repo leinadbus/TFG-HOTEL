@@ -12,6 +12,12 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
 </head>
+<style>
+    .input {
+        background-color: rgba(0, 0, 0, 0.1);
+
+    }
+</style>
 
 
 <body>
@@ -25,23 +31,25 @@
                 <fieldset>
                     <legend>Registro</legend>
                     <label for="nombre">Nombre: <span style="color: red; font-size: 20px;">*</span></label>
-                    <input type="text" name="nombrePropio" id="nombre" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,20}$" size="30" required>
+                    <input type="text" class="input" name="nombrePropio" id="nombre" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,20}$" size="30" required>
 
                     <label for="apellido1">Primer apellido:<span style="color: red; font-size: 20px;">*</span></label>
-                    <input type="text" name="primerApellido" id="apellido1" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,20}$" size="30" required>
+                    <input type="text" class="input" name="primerApellido" id="apellido1" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,20}$" size="30" required>
 
                     <label for="apellido2">Segundo apellido: <span style="color: red; font-size: 20px;">*</span></label>
-                    <input type="text" name="segundoApellido" id="apellido2" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,20}$" size="30">
+                    <input type="text" class="input" name="segundoApellido" id="apellido2" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,20}$" size="30">
 
                     <label for="celular">Teléfono de contacto: <span style="color: red; font-size: 20px;">*</span></label require>
-                    <input type="tel" name="telefono" id="celular" pattern="[6789]\d{8}$" size="30" required>
+                    <input type="tel" class="input" name="telefono" id="celular" pattern="[6789]\d{8}$" size="30" required>
+                    <br/>
+                    <p style="text-align: justify">Número de telefono de 9 digitos con un formato valido</p>
 
                     <label for="mail">Correo electrónico: <span style="color: red; font-size: 20px;">*</span></label>
-                    <input type="text" name="correoElectronico" id="mail" size="30" required>
+                    <input type="text" class="input" name="correoElectronico" id="mail" size="30" required>
                     <span id="errorCorreo" class="error" style="color: red;"></span>
 
                     <label for="mail">Confirma el correo electrónico: <span style="color: red; font-size: 20px;">*</span></label>
-                    <input type="text" name="correoElectronico2" id="mail2" size="30" required>
+                    <input type="text" class="input" name="correoElectronico2" id="mail2" size="30" required>
                     <span id="correoDiferente" class="error" style="color: red;"></span>
 
 
@@ -51,13 +59,13 @@
                 <input type="text" name="nombreUsuario" id="nombreUsuario" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ0-9\s]{3,20}$" required>  -->
                     <br />
                     <label for="pass">Contraseña: <span style="color: red; font-size: 20px;">*</span></label>
-                    <input type="password" id="password" name="contraseñaUsuario" required size="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,./?]).{8,20}">
+                    <input type="password" class="input" id="password" name="contraseñaUsuario" required size="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,./?]).{8,20}">
                     <br />
                     <p style="text-align: justify">Al menos una mayuscula, al menos una minuscula, entre 8 y 20 caracteres e incluir al menos un caracter especial</p>
                     <br>
                     <div id="fuerza" value=""></div>
                     <div style="display: flex; justify-content: center;">
-                        <input type="submit" name="btnNuevoUsuario" id="">
+                        <input type="submit" name="btnNuevoUsuario" id="" value="Iniciar Sesion">
                     </div>
 
                     <p><?php echo $msg ?? '' ?></p>

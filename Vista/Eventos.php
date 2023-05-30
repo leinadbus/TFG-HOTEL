@@ -15,9 +15,40 @@
     <link rel="stylesheet" type="text/css" href="eventos.css">
 
 </head>
+<style>
+    #btnScrollToTop {
+        display: none;
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        z-index: 99;
+        font-size: 30px;
+        width: 60px;
+        border: none;
+        outline: none;
+        background-color: #555;
+        color: white;
+        cursor: pointer;
+        padding: 15px;
+        border-radius: 50%;
+    }
+
+    #btnScrollToTop:hover {
+        background-color: #777;
+    }
+
+    #btn {
+        display: flex;
+        justify-content: center;
+    }
+
+    .nombreSala {
+        font-size: 30px;
+    }
+</style>
 
 <body>
-    
+
     <div>
         Las salas de eventos son espacios diseñados para acoger y celebrar una gran variedad de actividades, desde reuniones de
         negocios, conferencias hasta bodas, cumpleaños y otras celebraciones sociales. Estas grandes salas y
@@ -27,12 +58,20 @@
     </div>
 
 
+    <!-- Boton para contactor -->
+    <form method="post">
+        <div id="btn">
+            <button class="btn" name="btn_pagina_Contacto">Información para la reserva de salas</button>
+        </div>
+    </form>
 
 
-    <br/><br/>
-    <h1>Jardines</h1>
+
+    <br /><br />
+    <h1>Salas Verdes</h1>
+    <h6>Salas de eventos con jardines: Espacios encantadores y versátiles para banquetes, bodas y más. Combina la belleza de la naturaleza con comodidades modernas y servicios de alta calidad. Crea recuerdos inolvidables en un entorno elegante y sofisticado. Descubre la magia de nuestras salas y haz realidad tus sueños para ocasiones especiales.</h6>
     <div class="shadow p-3 mb-5 bg-white rounded">
-        <h3>Nuestros Jardines:</h3>
+
 
         <p>
             El Hotel de Lujo Imperial Retreat es reconocido por sus jardines imperiales, los cuales son el escenario perfecto para realizar diversos tipos de eventos. Desde bodas románticas y elegantes hasta conferencias profesionales, nuestros jardines ofrecen un ambiente encantador y versátil para todo tipo de celebraciones.
@@ -43,13 +82,24 @@
         </p>
     </div>
 
-    
+
 
     <div class="accordion" id="accordionExample">
         <div class="nombreSala">
             Jardin Somontes
-            <i class="fas fa-users">  200</i>
-            <div><i class="fas fa-ruler-combined fa-1x"></i> 120m&sup2</div>
+            <i class="fas fa-users"> 200</i>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16" style="margin-left: 20px">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
+                </svg> 120m&sup2
+                <br />
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16" style="margin-left: 20px">
+                    <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z" />
+                    <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z" />
+                    <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z" />
+                    <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z" />
+                </svg> xx
+            </div>
         </div>
         <div class="contenedor containerFotosJardinesEventos">
             <div class="corouselImagenes">
@@ -156,8 +206,19 @@
     <div class="accordion" id="accordionExample">
         <div class="nombreSala">
             Jardin Serenidad
-            <i class="fas fa-users">  300</i><br/>
-            <div><i class="fas fa-ruler-combined fa-1x"></i> 120m&sup2</div>
+            <i class="fas fa-users"> 300</i>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16" style="margin-left: 20px">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
+                </svg>120m&sup2
+                <br />
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16" style="margin-left: 20px">
+                    <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z" />
+                    <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z" />
+                    <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z" />
+                    <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z" />
+                </svg> xx
+            </div>
         </div>
         <div class="contenedor containerFotosJardinesEventos">
             <div class="corouselImagenes">
@@ -276,9 +337,9 @@
     <!-- FIN fotos galeria Jardines 2 Eventos -->
 
     <hr>
-
+    <h1>Salones de eventos:</h1>
+    <h6>Salas versátiles para eventos corporativos, conferencias y reuniones informales: Espacios elegantes y funcionales equipados con tecnología de vanguardia. Perfectos para reuniones de negocios, presentaciones, conferencias y eventos casuales. Nuestro equipo experto se encarga de cada detalle para garantizar el éxito de tu evento, sin importar su estilo o formato.</h6>
     <div class="shadow p-3 mb-5 bg-white rounded">
-        <h3>Nuestras Salas:</h3>
         <p>Descubre nuestras magníficas salas de eventos en Imperial Retreat. Ofrecemos una selección de espacios elegantes y sofisticados equipados con tecnología de vanguardia. Nuestro equipo profesional te brindará un servicio personalizado para garantizar que tu evento sea memorable. Además, contamos con servicios adicionales como catering de alta calidad y opciones de decoración personalizadas. Elige Imperial Retreat como el destino para tus eventos y planifica el evento de tus sueños con nosotros. ¡Contáctanos hoy mismo!</p>
 
     </div>
@@ -286,8 +347,19 @@
     <div class="accordion" id="accordionExample">
         <div class="nombreSala">
             Salon Esmeralda
-            <i class="fas fa-users">100</i><br/>
-            <div><i class="fas fa-ruler-combined fa-1x"></i> 100m&sup2</div>
+            <i class="fas fa-users">100</i>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16" style="margin-left: 20px">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
+                </svg> 100m&sup2
+                <br />
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16" style="margin-left: 20px">
+                    <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z" />
+                    <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z" />
+                    <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z" />
+                    <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z" />
+                </svg> xx
+            </div>
         </div>
         <div class="contenedor containerFotosJardinesEventos">
             <div class="corouselImagenes">
@@ -395,8 +467,19 @@
     <div class="accordion" id="accordionExample">
         <div class="nombreSala">
             Salon Majestic
-            <i class="fas fa-users">  200  </i><br/>
-            <div><i class="fas fa-ruler-combined fa-1x">    </i> 120m&sup2</div>
+            <i class="fas fa-users"> 200 </i>
+            <div>
+                <svg xmlns="http://www.w3.org/2000/svg" width="20" height="20" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16" style="margin-left: 20px">
+                    <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
+                </svg> 120m&sup2
+                <br />
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" class="bi bi-cash-coin" viewBox="0 0 16 16" style="margin-left: 20px">
+                    <path fill-rule="evenodd" d="M11 15a4 4 0 1 0 0-8 4 4 0 0 0 0 8zm5-4a5 5 0 1 1-10 0 5 5 0 0 1 10 0z" />
+                    <path d="M9.438 11.944c.047.596.518 1.06 1.363 1.116v.44h.375v-.443c.875-.061 1.386-.529 1.386-1.207 0-.618-.39-.936-1.09-1.1l-.296-.07v-1.2c.376.043.614.248.671.532h.658c-.047-.575-.54-1.024-1.329-1.073V8.5h-.375v.45c-.747.073-1.255.522-1.255 1.158 0 .562.378.92 1.007 1.066l.248.061v1.272c-.384-.058-.639-.27-.696-.563h-.668zm1.36-1.354c-.369-.085-.569-.26-.569-.522 0-.294.216-.514.572-.578v1.1h-.003zm.432.746c.449.104.655.272.655.569 0 .339-.257.571-.709.614v-1.195l.054.012z" />
+                    <path d="M1 0a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h4.083c.058-.344.145-.678.258-1H3a2 2 0 0 0-2-2V3a2 2 0 0 0 2-2h10a2 2 0 0 0 2 2v3.528c.38.34.717.728 1 1.154V1a1 1 0 0 0-1-1H1z" />
+                    <path d="M9.998 5.083 10 5a2 2 0 1 0-3.132 1.65 5.982 5.982 0 0 1 3.13-1.567z" />
+                </svg> xx
+            </div>
         </div>
         <div class="contenedor containerFotosJardinesEventos">
             <div class="corouselImagenes">
@@ -417,7 +500,7 @@
                         <div class="carousel-item ">
                             <img src="../img/evento/sala2/foto5.jpg" alt="...">
                         </div>
-                        
+
 
                     </div>
                     <button class="carousel-control-prev" type="button" data-bs-target="#carousel4" data-bs-slide="prev">
@@ -474,6 +557,9 @@
 
 
 
+    <!-- Boton de volver arriba para acceder al área de contacto -->
+    <button onclick="scrollToTop()" id="btnScrollToTop" title="Volver arriba">&#8679;</button>
+
 
 
 
@@ -527,5 +613,23 @@
 
 
 </body>
+<script>
+    window.onscroll = function() {
+        scrollFunction()
+    };
+
+    function scrollFunction() {
+        if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            document.getElementById("btnScrollToTop").style.display = "block";
+        } else {
+            document.getElementById("btnScrollToTop").style.display = "none";
+        }
+    }
+
+    function scrollToTop() {
+        document.body.scrollTop = 0; // Para Safari
+        document.documentElement.scrollTop = 0; // Para Chrome, Firefox, IE y Opera
+    }
+</script>
 
 </html>

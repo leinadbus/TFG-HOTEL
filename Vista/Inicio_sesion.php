@@ -36,6 +36,15 @@
         flex-direction: column;
         align-items: center;
     }
+
+    a {
+        font-size: 25px;
+    }
+
+    .input {
+        background-color: rgba(0, 0, 0, 0.1);
+        /* transition: background-color 0.3s ease; */
+    }
 </style>
 
 <body>
@@ -45,11 +54,11 @@
         <form method="post">
             <legend>Inicio de sesión</legend>
             <label for="user">Correo electrónico:</label><br/>
-            <input type="text" name="user" require><br/>
+            <input type="text" name="user" class="input" require><br/>
 
             <br>
             <label for="password">Contraseña:</label><br/>
-            <input type="password" name="contrasena" require><br/>
+            <input type="password" name="contrasena" class="input" require><br/>
 
             <input type="submit" name="btnEnviarUsuario">
         </form>

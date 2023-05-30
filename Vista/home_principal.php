@@ -64,7 +64,7 @@
 
                 <div class="form_reserva col">
                     <label for="fechaSalida">Fecha Salida:</label>
-                    <input type="date"  class="form-control" id="fechaSalida" name="datoFechaFin" required>
+                    <input type="date" class="form-control" id="fechaSalida" name="datoFechaFin" required>
                 </div>
 
                 <div class="form_reserva col">
@@ -103,56 +103,65 @@
 
         <!-- PIE -->
 
+
         <div class="containerPie">
             <!-- Restaurante -->
-            <div id="carouselRestaurante">
-                <div class="cabeceraCarousel">Restaurante</div>
-                <div id="carouselRestauranteSlide" class="carousel slide" data-bs-ride="carousel">
-                    <div class="carousel-inner imgCarouselRestaurante">
-                        <div class="carousel-item active">
-                            <img src="../img/restaurante/foto1.jpg" class="d-block w-100" alt="...">
+            <form method="post">
+                <div id="carouselRestaurante">
+                    <div class="cabeceraCarousel">Restaurante</div>
+                    <div id="carouselRestauranteSlide" class="carousel slide" data-bs-ride="carousel">
+                        <div class="carousel-inner imgCarouselRestaurante">
+                            <div class="carousel-item active">
+                                <button class="btn" name="btn_pagina_Galeria" style="background-color: transparent; opacity: 1;">
+
+                                    <img src="../img/restaurante/foto1.jpg" class="d-block w-100" alt="...">
+
+                                </button>
+
+
+
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/restaurante/foto2.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/restaurante/foto3.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/restaurante/foto4.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/restaurante/foto5.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/restaurante/foto6.jpg" class="d-block w-100" alt="...">
+                            </div>
+                            <div class="carousel-item">
+                                <img src="../img/restaurante/foto7.jpg" class="d-block w-100" alt="...">
+                            </div>
                         </div>
-                        <div class="carousel-item">
-                            <img src="../img/restaurante/foto2.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../img/restaurante/foto3.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../img/restaurante/foto4.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../img/restaurante/foto5.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../img/restaurante/foto6.jpg" class="d-block w-100" alt="...">
-                        </div>
-                        <div class="carousel-item">
-                            <img src="../img/restaurante/foto7.jpg" class="d-block w-100" alt="...">
+                        <button class="carousel-control-prev" type="button" data-bs-target="#carouselRestauranteSlide" data-bs-slide="prev">
+                            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Previous</span>
+                        </button>
+                        <button class="carousel-control-next" type="button" data-bs-target="#carouselRestauranteSlide" data-bs-slide="next">
+                            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                            <span class="visually-hidden">Next</span>
+                        </button>
+                    </div>
+
+                    <div class="descripcionRestaurante">
+                        <div>
+                            El restaurante del Imperial Retreat es una experiencia culinaria sin igual, con una amplia variedad de platos exquisitos preparados por chefs de renombre internacional. El ambiente es sofisticado y elegante, perfecto para cenas románticas o eventos especiales. Los ingredientes son cuidadosamente seleccionados de los mercados locales y de productores de alta calidad para ofrecer una cocina de temporada fresca y deliciosa. Además, el restaurante ofrece una extensa lista de vinos finos y bebidas artesanales para complementar tu comida.
+                            <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem incidunt a quibusdam voluptatum quasi, sed id porro rerum maiores, neque sapiente quisquam ea suscipit deserunt amet quod autem nostrum obcaecati? -->
+                            <!-- Bienvenidos al restaurante de Imperial Retreat. Aquí podrá disfrutar de una experiencia gastronómica excepcional en un ambiente elegante y acogedor. Nuestro menú, cuidadosamente seleccionado por nuestro chef, ofrece una amplia variedad de platos de alta cocina con ingredientes frescos y de alta calidad, que se complementan perfectamente con nuestra selección de vinos finos de todo el mundo. Nuestro personal altamente capacitado lo atenderá con amabilidad y profesionalismo, mientras disfruta de una vista impresionante de la ciudad o del mar. En nuestro restaurante, su experiencia culinaria será inolvidable y lo dejaremos con ganas de volver. -->
                         </div>
                     </div>
-                    <button class="carousel-control-prev" type="button" data-bs-target="#carouselRestauranteSlide" data-bs-slide="prev">
-                        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Previous</span>
-                    </button>
-                    <button class="carousel-control-next" type="button" data-bs-target="#carouselRestauranteSlide" data-bs-slide="next">
-                        <span class="carousel-control-next-icon" aria-hidden="true"></span>
-                        <span class="visually-hidden">Next</span>
-                    </button>
                 </div>
-
-                <div class="descripcionRestaurante">
-                    <div>
-                        El restaurante del Imperial Retreat es una experiencia culinaria sin igual, con una amplia variedad de platos exquisitos preparados por chefs de renombre internacional. El ambiente es sofisticado y elegante, perfecto para cenas románticas o eventos especiales. Los ingredientes son cuidadosamente seleccionados de los mercados locales y de productores de alta calidad para ofrecer una cocina de temporada fresca y deliciosa. Además, el restaurante ofrece una extensa lista de vinos finos y bebidas artesanales para complementar tu comida.
-                        <!-- Lorem ipsum dolor sit amet, consectetur adipisicing elit. Quidem incidunt a quibusdam voluptatum quasi, sed id porro rerum maiores, neque sapiente quisquam ea suscipit deserunt amet quod autem nostrum obcaecati? -->
-                        <!-- Bienvenidos al restaurante de Imperial Retreat. Aquí podrá disfrutar de una experiencia gastronómica excepcional en un ambiente elegante y acogedor. Nuestro menú, cuidadosamente seleccionado por nuestro chef, ofrece una amplia variedad de platos de alta cocina con ingredientes frescos y de alta calidad, que se complementan perfectamente con nuestra selección de vinos finos de todo el mundo. Nuestro personal altamente capacitado lo atenderá con amabilidad y profesionalismo, mientras disfruta de una vista impresionante de la ciudad o del mar. En nuestro restaurante, su experiencia culinaria será inolvidable y lo dejaremos con ganas de volver. -->
-                    </div>
-                </div>
-            </div>
-
+            </form>
             <!-- Eventos -->
             <div id="carouselEventos">
-                <div class="cabeceraCarousel">Eventos</div>
+                <div class="cabeceraCarousel"><a href="Galeria.php"><span style="text-decoration: none;">Eventos</span></a></div>
                 <div id="carouselEventosSlide" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner imgCarouselEventos">
                         <div class="carousel-item active">

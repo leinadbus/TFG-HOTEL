@@ -63,25 +63,25 @@
                 <div class="col-12">
                     <div class="d-flex flex-column">
                         <p class="text mb-1">Nombre del titular</p>
-                        <input class="form-control mb-3" type="text" placeholder="Nombre" name="nombreTarjeta">
+                        <input class="form-control mb-3" type="text" placeholder="Nombre" name="nombreTarjeta" required>
                     </div>
                 </div>
                 <div class="col-12">
                     <div class="d-flex flex-column">
                         <p class="text mb-1">Numero de la tarjeta</p>
-                        <input class="form-control mb-3" type="text" placeholder="1234 5678 435678" name="numeroTarjeta">
+                        <input class="form-control mb-3" type="text" placeholder="1234 5678 9012 3456" name="numeroTarjeta" id="numeroTarjeta" pattern="[0-9]*" maxlength=19 required>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="d-flex flex-column">
                         <p class="text mb-1">Fecha de caducidad</p>
-                        <input class="form-control mb-3" type="text" placeholder="MM/YYYY" name="caducidadTarjeta">
+                        <input class="form-control mb-3" type="text" placeholder="MM/YYYY" name="caducidadTarjeta" id="caducidadTarjeta" pattern="[0-9]*" maxlength=7 required>
                     </div>
                 </div>
                 <div class="col-6">
                     <div class="d-flex flex-column">
                         <p class="text mb-1">CVV/CVC</p>
-                        <input class="form-control mb-3 pt-2 " type="password" placeholder="***" >
+                        <input class="form-control mb-3 pt-2 " type="password" placeholder="***" pattern="[0-9]*" maxlength="3" required>
                     </div>
                 </div>
                 <div class="col-12">
@@ -91,6 +91,7 @@
         </div>
         </form>
     </div>
-
+    
 </body>
+<script type="text/javascript" src="pasarelaPago.js"></script>
 </html>

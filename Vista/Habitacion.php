@@ -17,18 +17,18 @@
 
 
 <body>
-    
+
     <br>
     <div class="shadow p-3 mb-5 bg-white rounded">
         <h3>Nuestras Habitaciones:</h3>
         <p>
-        En el Imperial Retreat, todas nuestras habitaciones son un oasis de lujo y confort.
-        Ofrecemos tres tipos de habitaciones, cada una con su propia personalidad y características únicas.
-        Las habitaciones tipo Imperial son las más exclusivas, con una decoración majestuosa y comodidades de alta gama.
-        Las habitaciones tipo de lujo también son una experiencia de ensueño, con una elegante decoración y una amplia
-        variedad de servicios. Incluso nuestras habitaciones tipo estándar ofrecen un alto nivel de confort y calidad, con
-        una decoración moderna y todas las comodidades necesarias para una estancia relajante. Todas nuestras habitaciones
-        están diseñadas para brindar una experiencia inolvidable a nuestros huéspedes.
+            En el Imperial Retreat, todas nuestras habitaciones son un oasis de lujo y confort.
+            Ofrecemos tres tipos de habitaciones, cada una con su propia personalidad y características únicas.
+            Las habitaciones tipo Imperial son las más exclusivas, con una decoración majestuosa y comodidades de alta gama.
+            Las habitaciones tipo de lujo también son una experiencia de ensueño, con una elegante decoración y una amplia
+            variedad de servicios. Incluso nuestras habitaciones tipo estándar ofrecen un alto nivel de confort y calidad, con
+            una decoración moderna y todas las comodidades necesarias para una estancia relajante. Todas nuestras habitaciones
+            están diseñadas para brindar una experiencia inolvidable a nuestros huéspedes.
         </p>
     </div>
     <hr>
@@ -48,7 +48,11 @@
                     <i class="fas fa-couch fa-0.5x"></i>1
                     <i class="fas fa-bath fa-0.5x"></i>2
                     <ion-icon name="person-outline" style="font-size: 40px;"></ion-icon>6
-                    <i class="fas fa-ruler-combined fa-1x"></i> 80m&sup2
+                    <i class="fas fa-ruler-combined fa-1x"></i>
+
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16" style="margin-bottom: 10px;">
+                        <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
+                    </svg> 80m&sup2
                 </div>
 
                 <div class="contenedor containerFotosHabitacionPresidencial">
@@ -166,7 +170,8 @@
                 </div>
                 <!-- FIN fotos galeria Presidencial -->
 
-                <br /><br /> <hr><br />
+                <br /><br />
+                <hr><br />
                 <h1>Lujo</h1>
                 <div class="descripcion">
 
@@ -177,7 +182,9 @@
                     <i class="fas fa-couch fa-0.5x"></i>1
                     <i class="fas fa-bath fa-0.5x"></i>1
                     <ion-icon name="person-outline" style="font-size: 40px;"></ion-icon>4
-                    <i class="fas fa-ruler-combined fa-1x"></i> 60m&sup2
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16" style="margin-bottom: 10px;">
+                        <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
+                    </svg> 60m&sup2
                 </div>
                 <!-- INICIO fotos galeria lujo -->
                 <div class="contenedor containerFotosHabitacionPresidencial">
@@ -296,7 +303,9 @@
                     <i class="fas fa-couch fa-0.5x"></i>1
                     <i class="fas fa-bath fa-0.5x"></i>1
                     <ion-icon name="person-outline" style="font-size: 40px;"></ion-icon>4
-                    <i class="fas fa-ruler-combined fa-1x"></i> 40m&sup2
+                    <svg xmlns="http://www.w3.org/2000/svg" width="40" height="40" fill="currentColor" class="bi bi-arrows-fullscreen" viewBox="0 0 16 16" style="margin-bottom: 10px;">
+                        <path fill-rule="evenodd" d="M5.828 10.172a.5.5 0 0 0-.707 0l-4.096 4.096V11.5a.5.5 0 0 0-1 0v3.975a.5.5 0 0 0 .5.5H4.5a.5.5 0 0 0 0-1H1.732l4.096-4.096a.5.5 0 0 0 0-.707zm4.344 0a.5.5 0 0 1 .707 0l4.096 4.096V11.5a.5.5 0 1 1 1 0v3.975a.5.5 0 0 1-.5.5H11.5a.5.5 0 0 1 0-1h2.768l-4.096-4.096a.5.5 0 0 1 0-.707zm0-4.344a.5.5 0 0 0 .707 0l4.096-4.096V4.5a.5.5 0 1 0 1 0V.525a.5.5 0 0 0-.5-.5H11.5a.5.5 0 0 0 0 1h2.768l-4.096 4.096a.5.5 0 0 0 0 .707zm-4.344 0a.5.5 0 0 1-.707 0L1.025 1.732V4.5a.5.5 0 0 1-1 0V.525a.5.5 0 0 1 .5-.5H4.5a.5.5 0 0 1 0 1H1.732l4.096 4.096a.5.5 0 0 1 0 .707z" />
+                    </svg> 40m&sup2
                 </div>
                 <!-- INICIO fotos galeria comun -->
                 <div class="contenedor containerFotosHabitacionPresidencial">
