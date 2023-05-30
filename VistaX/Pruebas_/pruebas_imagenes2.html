@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<script>
+    // function cambiarImagen(event) {
+    //     const imagen = event.target;
+    //     const nuevaFuente = "../../img/fotos/lupa.png";
+    //     const imagenLupa = document.createElement("img");
+    //     imagenLupa.setAttribute("src", nuevaFuente);
+    //     imagenLupa.setAttribute("class", "imagen-lupa");
+    //     imagen.parentNode.appendChild(imagenLupa);
+    //     // imagen.style.display = "none";
+    // }
+
+    // function restaurarImagen(event) {
+    //     const imagen = event.target;
+    //     const imagenLupa = imagen.parentNode.querySelector("imagen-lupa");
+    //     // imagen.style.display = "block";
+    //     imagen.parentNode.removeChild(imagenLupa);
+    // }
+
+   
+</script>
+<style>
+img {
+    width: 500px;
+    height: 500px;
+}
+.container {
+  position: relative;
+  display: inline-block;
+}
+
+.container::after {
+  content: "";
+  display: block;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("../../img/search.png");
+  background-repeat: no-repeat;
+  background-size: 100px 100px;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 0.3s ease-in-out;
+}
+
+.container:hover::after {
+    background-color: 	rgb(38, 38, 38); 
+    opacity: 0.56;
+}
+
+
+</style>
+
+<body>
+    <div >
+        <div class="container">
+            <img src="../../img/fotos/cuarto_completo.jpg" alt="Imagen 2"  >
+
+        </div>
+        <div class="container">
+            <img src="../../img/fotos/balcon.jpg" alt="Imagen 2"  >
+
+        </div>
+        <div class="container">
+            <img src="../../img/fotos/cuarto_frente_completo.jpg" alt="Imagen 2"  >
+
+        </div>
+        
+        
+    </div>
+
+    <!-- <div class="container">
+        <img src="../../img/fotos/instalacion1.jpg" alt="Imagen 1" class="img">
+        <img src="../../img/fotos/instalacion1.jpg" alt="Imagen 2" class="img">
+        <img src="../../img/fotos/instalacion2.jpg" alt="Imagen 3" class="img">
+
+    </div> -->
+
+
+</body>
+
+</html>

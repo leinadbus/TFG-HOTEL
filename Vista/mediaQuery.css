@@ -1,0 +1,162 @@
+/* 
+    tamaños genericos
+        - Para dispositivos móviles: 320px a 480px de ancho
+        - Para dispositivos de tamaño medio (como tablets): 481px a 768px de ancho
+        - Para dispositivos de pantalla grande: 769px a 1200px de ancho
+
+*/
+.footer {
+    margin-top: 20px;
+    margin-bottom: 0; /* eliminamos el margen inferior por defecto */
+  }
+
+  /* @media (max-width: 991px) {
+    .footer {
+      margin-top: 10%;
+      background-color: green;
+    }
+  }
+  @media (max-width: 750px) and (min-width: 301px) {
+    .footer {
+      margin-top: 60%;
+      background-color: peru;
+    }
+  }
+  @media (max-width: 540px) and (min-width: 301px) {
+    .footer {
+      margin-top: 80%;
+      background-color: peru;
+    }
+  }
+  @media (max-width: 300px) {
+    .footer {
+      margin-top: 220%;
+      background-color: peru;
+    }
+  } */
+  
+  
+  @media (max-width: 768px) {
+    .footer {
+      margin-top: 10px;
+      /* background-color: red; */
+    }
+  }
+@media (max-width: 991px) {
+    .footer {
+      margin-top: 10%;
+      /* background-color: green; */
+    }
+  }
+  @media (max-width: 750px) {
+    .footer {
+      margin-top: 60%;
+      /* background-color: peru; */
+    }
+  }
+
+  @media (max-width: 680px) {
+    .footer {
+      margin-top: 65%;
+      /* background-color: peru; */
+    }
+  }
+
+  @media (max-width: 630px) {
+    .footer {
+      margin-top: 70%;
+      /* background-color: peru; */
+    }
+  }
+
+  @media (max-width: 580px) {
+    .footer {
+      margin-top: 75%;
+      /* background-color: peru; */
+    }
+  }
+
+  @media (max-width: 540px) {
+    .footer {
+      margin-top: 80%;
+      /* background-color: peru; */
+    }
+  }
+
+  @media (max-width: 376px) {
+    .footer {
+      margin-top: 220%;
+      /* background-color: peru; */
+    }
+  }
+
+
+  
+  
+@media only screen and (min-width: 390px) and (max-width: 1024px) {
+    /* tamaño iphone se */
+    .carousel-inner {
+        max-height: 19rem !important;
+    }
+    /* .footer {
+        height: 100%;
+        background-color: peru;
+        margin-top: 10%;
+    } */
+    
+}
+
+@media only screen and (max-width: 390px) {
+    /* tamaño iphone se */
+
+
+    /* #headerSuperior {
+       max-height: 10rem;
+    }
+    #headerSuperior  p {
+        font-size: 15px;
+     } */
+
+     
+    .carousel-inner {
+        max-height: 9rem !important;
+    }
+    /* .footer {
+        height: 100%;
+        background-color: green;
+        margin-top: 260%;
+    } */
+   
+
+    
+}
+
+
+/* @media (max-width: 768px) {
+    .footer {
+        height: 500px;
+        background-color: peru;
+        margin-top: 120%;
+        // otras reglas CSS 
+    }
+} */
+
+/* @media only screen and (min-width: 900px) and (max-width: 1024px) {
+
+    // Estilos para tablets 
+    .footer {
+        height: 500px;
+        background-color: peru;
+        margin-top: 10%;
+    }
+} */
+
+/* @media only screen and (max-width: 800px) {
+
+    // Estilos para móviles 
+    .footer {
+        height: 500px;
+        background-color: green;
+        margin-top: 60%;
+    }
+} */

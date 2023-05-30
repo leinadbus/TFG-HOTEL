@@ -1,0 +1,252 @@
+/* Tamaño Carrousel Principal de home_principal.php */
+.carousel-inner {
+    max-height: 30rem !important;
+
+}
+
+.carousel-item.active img {
+    object-position: center !important;
+}
+
+/*  */
+
+.titulo {
+    color: #ffdd84;
+    text-decoration: none;
+    font-size: 58px;
+}
+
+td {
+    padding: 10px;
+}
+
+
+
+/* FOOTER PAGINA PRINCIPAL */
+
+footer {
+    /* background-color: red; */
+    width: 100%;
+    margin-top: 2%;
+    margin-right: 0%;
+    margin-left: 0%;
+}
+
+.footerPrincipal>div>h4, .footerPrincipal {
+    display: flex;
+    justify-content: center;
+}
+
+.footerLogo>div>h6 {
+    display: flex;
+    justify-content: center;
+}
+
+.footerLogo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.logoEmpresa {
+    display: flex;
+    justify-content: center;
+}
+
+.containerPie {
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: center;
+    margin-top: 200px;
+    height: 800px;
+}
+
+.contenidoContacto {       
+    display: flex;
+    flex-direction: column;
+    padding-left: 30%;
+}
+
+.iconos {
+    /* background-color: green; */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    padding-left: 20%;
+}
+
+.boletinFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+li > a{
+    color: white;
+    
+}
+
+
+/*******************************************************/
+
+
+/* 
+input:invalid {
+    border: solid 1px red;
+} */
+
+.contenedorFormulario {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.formularioRegistro {
+    width: 250px;
+    height: 400px;
+}
+
+.formularioContacto {
+    width: 250px;
+    height: 600px;
+}
+
+.botonEnvio {
+    display: flex;
+    justify-content: center;
+}
+
+/* FORMULARIO RESERVA PAGINA PRINCIPAL */
+.formularioReserva {
+    /* background-color: red; */
+    /* display: flex; */
+    /* flex-wrap: wrap;  
+     width: 500px;  */
+    /* background-color: red;;
+}
+
+.form_reserva {
+    /* background-color: green; */
+    flex-basis: 50%;
+    flex-grow: 1;
+    display: flex;
+    justify-content: center;
+}
+
+/* .formularioReserva>div:nth-child(1),
+.formularioReserva>div:nth-child(3),
+.formularioReserva>div:nth-child(5),
+.formularioReserva>div:nth-child(7) {
+    margin-right: 10px;
+}
+
+.formularioReserva>div:nth-child(2),
+.formularioReserva>div:nth-child(4),
+.formularioReserva>div:nth-child(6),
+.formularioReserva>div:nth-child(8) {
+    margin-left: 10px;
+} */
+
+.formularioReserva>div:nth-child(9) {
+    /* background-color: peru; */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+.formulario_cambio_parametros{
+    padding: 2%;
+   
+  }
+
+/*******************************************************/
+
+
+#carouselSpa,
+#carouselRestaurante,
+#carouselEventos {
+    width: 300px;
+    height: 300px;
+    margin-left: 20px;
+}
+
+.imgCarouselRestaurante>div>img,
+.imgCarouselEventos>div>img,
+.imgCarouselSpa>div>img {
+    width: 280px;
+    height: 280px;
+}
+
+/* Cabecera Carousel PAGINA PRINCIPAL */
+.cabeceraCarousel {
+    font-weight: bold;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+/*******************************************************/
+
+
+/* Botones */
+
+.btn {
+    background-color: #6f6d6d;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    opacity: 1;
+    color: white;
+    background-color: rgb(139, 195, 183);
+}
+
+.btnIni {
+    background-color: #b4b1b1;
+    border: none;
+    color: white;
+    padding: 16px 32px;
+    text-align: center;
+    font-size: 16px;
+    margin: 4px 2px;
+    opacity: 0.6;
+    transition: 0.3s;
+}
+
+.btnIni:hover {
+    opacity: 1;
+    color: white;
+    background-color: rgb(139, 195, 183);
+}
+
+.btn-custom {
+    background-color: black;
+}
+
+li > button:hover {
+    background-color: rgb(139, 195, 183);
+}
+
+li > button {
+    width: 150px;
+}
+
+
+/*******************************************************/
+        /* Iconos caracteristicas de las habitaciones */
+.caracteristicas {
+    font-size: 40px;
+}
+
+/*******************************************************/

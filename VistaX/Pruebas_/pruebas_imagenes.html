@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<style>
+    
+    img {
+        width: 400px;
+        height: 400px;
+    }
+
+    .image-container {
+        position: relative;
+    }
+
+    .overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        opacity: 0;
+        transition: opacity 0.5s ease-in-out;
+
+    }
+
+    .image-container:hover .overlay {
+        opacity: 1;
+    }
+
+    .transparencia {
+        opacity: 0.5;
+    }
+
+    .noTransparencia {
+        opacity: 1;
+    }
+
+    .contenedorImagen:hover {
+        background-color: black;
+        opacity: 0.9;
+    }
+    body{
+        background-color: red;
+    }
+</style>
+<script>
+    // function cambiarRuta(a) {
+    //     document.getElementById(a).src = "../../img/fotos/jardin.jpg";
+    // }
+
+    // function volverRuta() {
+    //     document.getElementById(a).src = "../../img/fotos/instalacion1.jpg";
+    // }
+
+    // <!-- FUNCIONA --> //
+    function cambiarImagen(event) {
+        const image = event.target;
+        const newSrc = '../../img/lupaBuena.png'; // Ruta nueva de la imagen
+
+        image.setAttribute('src', newSrc);
+        image.style.opacity = '0.5';
+    }
+
+    function recuperar_imagen(event) {
+        const image = event.target;
+        const originalSrc = image.getAttribute('data-original-src');
+        console.log("ruta vieja -> ",originalSrc);
+
+        image.setAttribute('src', originalSrc);
+        image.style.opacity = '1';
+    }
+
+</script>
+
+
+<body>
+    <div >
+        <img  src="../../img/fotos/instalacion1.jpg" data-original-src="../../img/fotos/instalacion1.jpg"
+            onmouseover="cambiarImagen(event)" onmouseout="recuperar_imagen(event)">
+        <img src="../../img/fotos/instalacion2.jpg" data-original-src="../../img/fotos/instalacion2.jpg"
+            onmouseover="cambiarImagen(event)" onmouseout="recuperar_imagen(event)">
+
+        <!-- <img id="imagen" onmouseover="cambiarRuta('imagen')" onmouseout="volverRuta()"
+            src="../../img/fotos/instalacion1.jpg" alt="Imagen 1">.
+        <img id="imagen" onmouseover="cambiarRuta()" onmouseout="volverRuta()" src="../../img/fotos/instalacion1.jpg"
+            alt="Imagen 1">. -->
+    </div>
+
+</body>
+
+</html>
