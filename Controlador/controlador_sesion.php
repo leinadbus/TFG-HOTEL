@@ -3,10 +3,12 @@ require_once "../Modelo/usuario.php";
 
 $usuarioPrueba = new Usuario('','','','','','','','admin');
 
+// Esta condición vigila que la sesión esté iniciada
     if(isset($_REQUEST['inicio_Sesion'])){
         header("location:Inicio_sesion.php");
     }
 
+    // Esta condición crea un usuario cuando se llama desde el formulario de nuevo usuario
     if(isset($_REQUEST['btnNuevoUsuario'])){
         $nuevoUsuario = new Usuario(filter_var($_POST['nombrePropio'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
                                     filter_var($_POST['primerApellido'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
@@ -28,6 +30,7 @@ $usuarioPrueba = new Usuario('','','','','','','','admin');
 
     }
 
+    // Esta condición cierra la sesión del usuario
     if(isset($_REQUEST['cerrar_usuario'])){
     
     session_destroy();
@@ -35,6 +38,7 @@ $usuarioPrueba = new Usuario('','','','','','','','admin');
         header("Refresh:0");
     }
 
+    // Esta condición inicia sesión en la plataforma con un usuario existente
     if(isset($_REQUEST['btnEnviarUsuario'])){
 
         $usuarioEjemplo = new Usuario('','','','',
@@ -52,15 +56,12 @@ $usuarioPrueba = new Usuario('','','','','','','','admin');
             $_SESSION['tipo_Usuario']=$registros[0]['rol'];
             header("location:home.php");
 
-            
-            
-
-
         } else {
             $msg = "Contraseña no válida";
         }
     }
 
+    // Esta condición es la encargada de borrar un usuario administrador desde su botón en la sección de administración
     if(isset($_REQUEST['borrarAdmin'])){
         $cod = $_REQUEST['borrarAdmin'];
         $usuarioPrueba->borrar($cod);

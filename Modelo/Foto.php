@@ -4,7 +4,7 @@
     class Foto extends CRUD {
 
         private $conexion, $cod_estancia, $foto;
-        //  $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad;
+        
         public static $TABLA = 'foto';
 
         function __construct($cod_estancia, $foto)
@@ -15,8 +15,21 @@
             $this->foto = $foto;
         }
 
+         /*
+            getter y setter magico
+        */
+        function __get($valor)
+        {
+            return $this->$valor;
+        }
+    
+        function __set($valor, $nuevoValor)
+        {
+            $this->$valor = $nuevoValor;
+        }
+        
         /*
-
+        Método que permite crear una tupla en la tabla fotografias
         */
         function crearFoto()
         {
@@ -39,7 +52,7 @@
 
 
         /*
-
+        Método que permite modificar una tupla de la tabla fotografias
         */
         function modificarFoto($cod_foto, $cod_estancia, $foto)
         {
@@ -53,21 +66,5 @@
             }
         }
 
-        /*
-
-        
-
-        /*
-            getter y setter magico
-        */
-        function __get($valor)
-        {
-            return $this->$valor;
-        }
-    
-        function __set($valor, $nuevoValor)
-        {
-            $this->$valor = $nuevoValor;
-        }
     }
 ?>

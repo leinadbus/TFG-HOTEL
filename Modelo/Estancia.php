@@ -21,8 +21,21 @@
                 $this->localidad = $localidad;
             }
 
+            /*
+            getter y setter magico
+            */
+            function __get($valor)
+            {
+                return $this->$valor;
+            }
+        
+            function __set($valor, $nuevoValor)
+            {
+                $this->$valor = $nuevoValor;
+            }
+            
         /*
-
+            Método que crea una instancia de Estancia
         */
         function crearEstancia() 
         {
@@ -60,7 +73,7 @@
         }
         
          /*
-
+        Método que obtiene estancias que no estén relacionadas ni con una habitación ni con una sala (NiSaNiHa)
         */
         function obtenerNiSaNiHa()
         {
@@ -87,56 +100,8 @@
         }
 
 
-        /*
-SELECT que saca las estancias que no estan siendo usadas en la tabla de habitaciones
-
-subconsultas
-
-SELECT *
-FROM estancia
-WHERE estancia.cod_estancia NOT IN (
-  SELECT cod_estancia
-  FROM habitacion
-  WHERE cod_estancia IS NOT NULL
-);
-
-JOIN
-
-SELECT *
-FROM estancia
-LEFT JOIN habitacion
-ON estancia.cod_estancia = habitacion.cod_estancia
-WHERE habitacion.cod_estancia IS NULL;
-
-SELECT que saca las estancias que no estan siendo usadas en la tabla de salas
-
-subconsultas
-
-SELECT *
-FROM estancia
-WHERE estancia.cod_estancia NOT IN (SELECT cod_estancia FROM habitacion);
-
-JOIN
-
-SELECT *
-FROM estancia
-LEFT JOIN sala
-ON estancia.cod_estancia = sala.cod_estancia
-WHERE sala.cod_estancia IS NULL;
-
-SQL que muestra las estancias que no estan siendo usadas ni en habitaciones ni en salas
-SELECT *
-FROM estancia
-WHERE NOT EXISTS (
-  SELECT *
-  FROM habitacion
-  WHERE habitacion.cod_estancia = estancia.cod_estancia
-)
-AND NOT EXISTS (
-  SELECT *
-  FROM sala
-  WHERE sala.cod_estancia = estancia.cod_estancia
-);
+       /*
+        Método que permite actualizar los datos de una Estancia
         */
         function modificarEstancia($cod_estancia, $estado, $descripcion, $ubicacion, $planta, $tipo_estancia, $precio, $descuento, $localidad) 
         {
@@ -152,18 +117,5 @@ AND NOT EXISTS (
             }
         }
 
-
-        /*
-            getter y setter magico
-        */
-        function __get($valor)
-        {
-            return $this->$valor;
-        }
-    
-        function __set($valor, $nuevoValor)
-        {
-            $this->$valor = $nuevoValor;
-        }
     }
 ?>

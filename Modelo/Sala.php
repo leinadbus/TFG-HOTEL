@@ -16,8 +16,22 @@
             $this->tipo_sala = $tipo_sala;
         }
 
+        
         /*
+            getter y setter magico
+        */
+        function __get($valor)
+        {
+            return $this->$valor;
+        }
+    
+        function __set($valor, $nuevoValor)
+        {
+            $this->$valor = $nuevoValor;
+        }
 
+        /*
+        Método que permite obtener toda la información de las salas con sus estancias
         */
         function obtenerTodoSala()
         {
@@ -32,7 +46,9 @@
             }
         } 
 
-
+        /*
+        Método que permite obtener toda la información de las salas con sus estancias y las muestra en una tabla
+        */
         function muestraSalas () {
             try {
                   $registro = $this->obtenerTodoSala();
@@ -62,8 +78,8 @@
         }
     }
 
-/*
-
+        /*
+        Método que permite crear una tupla en la tabla salas
         */
 
         function crearSala()
@@ -90,7 +106,7 @@
         }
 
         /*
-
+        Método que permite obtener una sala concreta otorgando el id de la sala
         */
         function obtenerIdSala($id)
         {
@@ -107,7 +123,7 @@
 
 
         /*
-
+        Método que permite modificar una tupla de sala
         */
         function modificarSala($cod_sala, $cod_estancia, $aforo, $tipoSala)
         {
@@ -121,7 +137,9 @@
             }
         }
 
-
+        /*
+        Método que permite obtener una sala concreta otorgando el id de la estacia
+        */
         function obtenerIdSalaConEstancia($id)
         {
             try {
@@ -160,17 +178,5 @@
             }
         }
 
-        /*
-            getter y setter magico
-        */
-        function __get($valor)
-        {
-            return $this->$valor;
-        }
-    
-        function __set($valor, $nuevoValor)
-        {
-            $this->$valor = $nuevoValor;
-        }
     }
 ?>

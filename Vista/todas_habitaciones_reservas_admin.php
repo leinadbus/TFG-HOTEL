@@ -38,15 +38,12 @@
                 <label for="fechaSalida">Fecha Salida</label>
                 <input type="date" id="fechaSalida" name="datoFechaFin" value=<?= $fechaFinFormateada ?> class="form-control"> 
             </div>
-            <!-- <div class="col"> -->
-                <!-- <label for="nAdultos">Adultos</label> -->
+           
                 <input type="hidden" class="form-control" name="cantidadHabitaciones" id="cantidadHabitaciones" value="500" required>
 
                     <input type="hidden" class="form-control" name="tipoEstancia" id="nAdultos"  value="todas" required>
                 <input type="hidden" name="adultos" id="nAdultos" value='<?= $numPersonas?>' class="form-control" min="1" max="5">
-            <!-- </div>
-            <div class="col"> -->
-                <!-- <label for="nNiños">Niños (menores 13 años)</label> -->
+           
                 <input type="hidden" name="niños" id="nNiños" value='<?= $numNiños?>' class="form-control"  min="0" max="5">
             <!-- </div> -->
             <div class="col">
@@ -96,7 +93,7 @@
     </body>
     <?php
 include '../Controlador/controlador_carrito.php';
-// print_r($_SESSION['arrayReserva']);
+
 ?>
     </html>
 </body>

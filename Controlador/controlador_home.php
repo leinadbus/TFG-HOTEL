@@ -1,6 +1,7 @@
 <?php
 require_once '../Modelo/Reserva.php';
 
+// Este controlador gestiona lo que la página enseña en cada momento
 if(isset($_REQUEST['btn_Administracion'])){
    
     include '../Vista/Home_Administracion.php';
@@ -135,29 +136,5 @@ if(isset($_REQUEST['btn_Administracion'])){
     
   }
 
-//  btn_aniadir_sala
-
-//  btn_anadir_estancia
-
-//  btn_reserva_admin
-
-//  reserva_habitacion_admin
-
-//  bton_formulario_fechas_admin
-
-//  btn_cambio_parametros_admin
-
-//  btn_enviar_extras
-
-//  btn_enviar_datos_cliente
-
-// terminar_reserva_admin
-// btn_ver_habitaciones
-
-// bton_formulario_principal
-// btn_enviar_reservas
-// btn_enviar_extras
-// cambiarEstadoHabitacion
-// btnNuevoAdmin
 ?>
 

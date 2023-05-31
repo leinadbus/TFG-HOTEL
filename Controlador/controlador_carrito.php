@@ -3,9 +3,11 @@ require_once "../Modelo/Habitacion.php";
 require_once "../Modelo/Reserva.php";
 require_once "../Modelo/usuario.php";
 
+//Variables de entorno:
 $habitacion = new Habitacion('','','','','','','','','','','','');
 $reserva = new Reserva();
-// $_SESSION['arrayhabitaciones']= [];
+
+// Este controlador gestiona botón a botón todo el proceso de reserva de la habitación
 
   if (isset($_POST['btn_enviar_reservas'])){
       if (!empty($_POST['producto'])) {
@@ -58,8 +60,6 @@ $reserva = new Reserva();
     $arrayRecuperaCarrito['precioFinal']= $_POST['precioEscondido'];
     $_SESSION['arrayReserva']=$arrayRecuperaCarrito;
             
-            // print_r($_SESSION['arrayReserva']);
-            //  print_r($_SESSION['arrayhabitaciones']);
     
   } else if (isset($_REQUEST['enviar_Pago'])) {
     $arrayRecuperaCarrito = $_SESSION['arrayReserva'];
@@ -73,17 +73,9 @@ $reserva = new Reserva();
 
     $_SESSION['arrayReserva']=$arrayRecuperaCarrito;
 
-          //  print_r($_SESSION['arrayReserva']);
-          // echo "<br>";
-          // print_r($_SESSION['arrayhabitaciones']);
-          //  echo "<br>";
 
     $informacionUsuario = $usuarioPrueba->obtieneInfoUsuario($_SESSION['correo_Usuario']);
-    // print_r($_SESSION['arrayhabitaciones']);
-        // print_r($informacionUsuario);
-        // echo "<br>";
-        // echo $informacionUsuario[0]->nombre;
-
+   
         //Aquí hacemos la insercción de datos de la reserva: tablas RESERVAS y FACTURAS
         foreach ($habitaciones as $habitacion=>$precio) { 
           //Añadimos las reservas, tantas como habitaciones seleccionadas por el cliente
@@ -111,23 +103,15 @@ $reserva = new Reserva();
     $habitacionAdmin = $_POST['reservaAdministracion'];
 
           $habi = $habitacion->obtenerIdHabitacionConEstancia($habitacionAdmin);
-          // print_r($habi);
 
           $precioTotal =$habi[0]['precio'];
         
-   
-      
       // Multiplicamos el total del precio de las habitaciones de un solo dia por el numero total de dias:
       $precioTotal =  $precioTotal* $_SESSION['arrayReserva']['numeroDias'];
       // Introducimos el array provisional en el de sesion para poder recuperarlo en el futuro
       $_SESSION['habitacionAdmin'] = [];
-      // $habitación = $_SESSION['arrayhabitaciones'];
-      // $habitación['habitacion']=$habi;
+     
       $_SESSION['habitacionAdmin']=$habi;
-      // echo "<br>";
-      // print_r( $_SESSION['habitacionAdmin']);
-  
-
 
     }else if (isset($_REQUEST['btn_enviar_extras_admin'])) {
    
@@ -137,10 +121,7 @@ $reserva = new Reserva();
       $arrayRecuperaCarrito['recogidaAeropuerto']= $_POST['aeropuerto'];
       $arrayRecuperaCarrito['precioFinal']= $_POST['precioEscondido'];
       $_SESSION['arrayReserva']=$arrayRecuperaCarrito;
-              
-              // print_r($_SESSION['arrayReserva']);
-              // print_r($_SESSION['arrayhabitaciones']);
-      
+    
     }else if (isset($_POST['btn_enviar_datos_cliente'])){
       
       $nuevoUsuario = new Usuario($_POST['nombrePropio'],
@@ -178,14 +159,9 @@ $reserva = new Reserva();
       $arrayRecuperaCarrito = $_SESSION['arrayReserva'];
 
       $habitacion = $_SESSION['habitacionAdmin'];
-      // echo "CLIENTE: " ;
-      // print_r($arrayCliente);
-
+    
       $informacionUsuario = $nuevoUsuario->obtieneInfoUsuario($arrayCliente['correoElectronico'].".admin");
       
-      // echo "<br>";echo "<br>";echo "<br>";
-      
-      // print_r($habitacion[0]['cod_estancia']);
       
       //  Añadimos la reserva
       $reserva->añadirReserva($informacionUsuario[0]->cod_usuario,$habitacion[0]['cod_estancia'],$_SESSION['arrayReserva']['fechaInicio'],$_SESSION['arrayReserva']['fechaFin']);
@@ -207,4 +183,3 @@ $reserva = new Reserva();
       
       
     }
-    // $habitaciones

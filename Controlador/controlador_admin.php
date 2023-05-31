@@ -4,11 +4,13 @@ require_once "../Modelo/Estancia.php";
 require_once "../Modelo/Habitacion.php";
 require_once "../Modelo/Sala.php";
 
-//Objetos de uso común:
+//Variables de entorno:
 $estanciaGeneral = new Estancia('','','','','','','','','');
 $estanciasDisponibles = $estanciaGeneral->obtenerNiSaNiHa();
 $habitacionGeneral = new Habitacion('','','','','','','','','','','','');
 $salaGeneral = new Sala('','','','','','','','','','','','');
+
+// Controlador que gestiona el alta de un nuevo usuario ADMINISTRADOR
 if(isset($_REQUEST['btnNuevoAdmin'])){
     $nuevoUsuario = new Usuario(filter_var($_POST['nombrePropio'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
                                 filter_var($_POST['primerApellido'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
@@ -31,6 +33,7 @@ if(isset($_REQUEST['btnNuevoAdmin'])){
                                 }  
  } 
 
+// Controlador que gestiona la creación de una nueva estancia
  if (isset($_REQUEST['btnNuevaEstancia'])) {
     $nuevaEstancia = new Estancia($_POST['cod_estancia'],
                                     $_POST['estado'],
@@ -46,6 +49,8 @@ if(isset($_REQUEST['btnNuevoAdmin'])){
 
     }
  }
+
+ // Controlador que gestiona la creación de una nueva habitación
  if (isset($_REQUEST['btnNuevaHabitacion'])) {
 
             $nuevaEstancia = new Estancia($_POST['cod_estancia'],
@@ -70,7 +75,7 @@ if(isset($_REQUEST['btnNuevoAdmin'])){
     
  }
 
-
+// Controlador que gestiona la creación de una nueva Sala
 if (isset($_REQUEST['btnNuevaSala'])) {
     
         $nuevaEstancia = new Estancia($_POST['cod_estancia'],
@@ -94,11 +99,14 @@ if (isset($_REQUEST['btnNuevaSala'])) {
     }
  }
 
+ // Controlador que gestiona el control de estados de las habitaciones
  if(isset($_REQUEST['cambiarEstadoHabitacion'])) {
     $estadoHabitacion = $_POST['cambiarEstadoHabitacion'];
     // echo $estadoHabitacion; 
     $habitacionGeneral->cambiarEstadoHabitación($estadoHabitacion);
  }
+
+// Controlador que gestiona el control de estados de las salas
  if(isset($_REQUEST['cambiarEstadoSala'])) {
     $estadoHabitacion = $_POST['cambiarEstadoSala'];
     // echo $estadoHabitacion; 

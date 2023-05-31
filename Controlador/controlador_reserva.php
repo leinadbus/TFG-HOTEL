@@ -2,6 +2,8 @@
 
 require_once '../Modelo/Reserva.php';
 
+// Este controlador es el encargado de poder hacer un buscador de habitaciones a reservar dinámico
+
   // Calculamos el número de noches que va a pasar en el Hotel
   $fechaInicio =  new DateTime($_POST['datoFechaInicio']);
   $fechaFin = new DateTime($_POST['datoFechaFin']);
@@ -9,10 +11,6 @@ require_once '../Modelo/Reserva.php';
   //diff será el valor del número de días que estará el cliente en el establecimiento 
   $diff = $fechaInicio->diff($fechaFin);
 
-
-  //Calculo de numero de habitaciones necesarias
-  // $numPersonas = (int)$_POST['adultos'];
-  // $numNiños = (int)$_POST['niños'];
   $numHabitaciones = $_POST['cantidadHabitaciones'];
   $tipo = $_POST['tipoEstancia'];
   // Volvemos a recoger las fechas para poder mostrarlas en el formulario por si el usuario quiere cambiarlas
@@ -27,9 +25,7 @@ require_once '../Modelo/Reserva.php';
     "fechaInicio" => $fechaInicioFormateada,
     "fechaFin" => $fechaFinFormateada,
     "numeroDias" => $diff->days,
-    "numeroHabitaciones" => $numHabitaciones,
-    // "numeroPersonas" => $numPersonas,
-    // "numeroNiños" => $numNiños,
+   
   );
 
   $_SESSION['arrayReserva']=$arrayDeDatos;

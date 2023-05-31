@@ -14,7 +14,7 @@
         }
 
         /*
-
+        Método borrar genérico
         */
         function borrar($cod)
         {
@@ -31,7 +31,7 @@
         }
 
         /*
-
+        Método obtener todos los datos de una tabla genérico
         */
         function obtenerTodo()
         {
@@ -47,7 +47,7 @@
         }
 
         /*
-
+        Método obtiene una tupla concreta
         */
         function obtenerId($id)
         {

@@ -17,7 +17,20 @@
         }
 
         /*
-
+            getter y setter magico
+        */
+        function __get($valor)
+        {
+            return $this->$valor;
+        }
+    
+        function __set($valor, $nuevoValor)
+        {
+            $this->$valor = $nuevoValor;
+        }
+        
+        /*
+        Método que obtiene los datos de una habitación y su estancia relacionada
         */
 
         function obtenerTodoHabitacion()
@@ -32,8 +45,9 @@
                 echo "<br/>ERROR AL OBTENER TODOS LAS FOTOS " . $e->getMessage();
             }
         }
- /*
 
+        /*
+        Método que muestra todas las habitaciones de la tabla
         */
 
         function muestraHabitaciones () {
@@ -69,7 +83,7 @@
     }
 
          /*
-
+        Método que obtiene los datos de una tupla concreta de habitación con su estancia otorgando el id de la habitación
         */
 
         function obtenerIdHabitacion($id)
@@ -85,6 +99,11 @@
             }
         }
 
+
+        /*
+        Método que obtiene los datos de una tupla concreta de habitación con su estancia orotgando el id de la estancia
+        */
+
         function obtenerIdHabitacionConEstancia($id)
         {
             try {
@@ -98,7 +117,9 @@
             }
         }
 
-
+        /*
+        Método que permite añadir una nueva tupla de habitación
+        */
         function crearHabitacion()
         {
             try {
@@ -123,7 +144,7 @@
         }
 
         /*
-
+        Método que permite modificar una tupla de habitación
         */
         function modificarHabitacion($cod_habitacion, $cod_estancia, $numCamas, $tipoBano)
         {
@@ -161,32 +182,6 @@
             }
         }
 
-        /*
-            getter y setter magico
-        */
-        function __get($valor)
-        {
-            return $this->$valor;
-        }
-    
-        function __set($valor, $nuevoValor)
-        {
-            $this->$valor = $nuevoValor;
-        }
     }
 
-
-
-
-/*
-Esta pinta mejor
-SELECT *
-FROM habitacion
-WHERE cod_estancia NOT IN (
-    SELECT cod_estancia 
-    FROM reserva
-    WHERE fecha_inicio BETWEEN '2023-05-01' AND '2023-05-09'
-    OR fecha_fin BETWEEN '2023-05-03' AND '2023-05-09'
-)
-    */
 ?>
