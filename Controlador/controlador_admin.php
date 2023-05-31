@@ -10,13 +10,12 @@ $estanciasDisponibles = $estanciaGeneral->obtenerNiSaNiHa();
 $habitacionGeneral = new Habitacion('','','','','','','','','','','','');
 $salaGeneral = new Sala('','','','','','','','','','','','');
 if(isset($_REQUEST['btnNuevoAdmin'])){
-    $nuevoUsuario = new Usuario($_POST['nombrePropio'],
-                                $_POST['primerApellido'],
-                                $_POST['segundoApellido'],
-                                $_POST['telefono'],
-                                $_POST['correoElectronico'],
-                                // $_POST['nombreUsuario'],
-                                $_POST['contraseñaUsuario'],
+    $nuevoUsuario = new Usuario(filter_var($_POST['nombrePropio'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+                                filter_var($_POST['primerApellido'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+                                filter_var($_POST['segundoApellido'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+                                filter_var($_POST['telefono'], FILTER_SANITIZE_NUMBER_INT),
+                                filter_var($_POST['correoElectronico'], FILTER_SANITIZE_EMAIL),
+                                filter_var($_POST['contraseñaUsuario'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
                                 'admin');
                                 
                                 if(!$nuevoUsuario->comprobarCorreoExistente($_POST['correoElectronico'])){
@@ -70,14 +69,7 @@ if(isset($_REQUEST['btnNuevoAdmin'])){
             }
     
  }
-//  if (isset($_REQUEST['btnNuevaHabitacion'])) {
 
-//     $nuevaHabitacion = new Habitacion($_POST['cod_estancia'],'no','no','no','no','no','no','no','no',$_POST['cod_habitacion'],$_POST['num_camas'],$_POST['tipo_bano']);
-//     if($nuevaHabitacion->crearHabitacion()){
-//         echo "Habitación creada";
-//     }
-    
-//  }
 
 if (isset($_REQUEST['btnNuevaSala'])) {
     
@@ -107,12 +99,6 @@ if (isset($_REQUEST['btnNuevaSala'])) {
     // echo $estadoHabitacion; 
     $habitacionGeneral->cambiarEstadoHabitación($estadoHabitacion);
  }
-//  if (isset($_REQUEST['btnNuevaSala'])) {
-//     $nuevaSala = new Sala($_POST['cod_estancia'],'','','','','','','','',$_POST['cod_Sala'],$_POST['aforo'],$_POST['tipo_Sala']);
-//     if($nuevaSala->crearSala()){
-//         echo "Sala creada";
-//     }
-//  }
 
  
 ?>

@@ -86,8 +86,10 @@
                 <div class='card-body'>
                 <h4 class='card-title' style='display:inline;'>Tipo:</h4><h2 class='card-title' style='display:inline;'> " . ucwords($x->tipo_estancia) . "</h2>
                 <h4 style='color: green;'>" . $x->precio . "€/noche</h4>
+                <i class='fas fa-bed fa-0.5x'></i> " . $x->num_camas. " <i class='fas fa-bath fa-0.5x'></i> " . $x->tipo_bano. "
                 <p class='card-text'>" .  $x->descripcion . "
                 </p>
+                
 
                 <input type='checkbox' name='producto[]' class='btn-check' id='" . $x->cod_estancia . "' value='" . $x->cod_estancia . "' autocomplete='off' >
                 <label class='btn btn-outline-primary' for='" . $x->cod_estancia . "'>Añadir</label>

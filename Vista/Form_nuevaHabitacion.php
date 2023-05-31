@@ -131,7 +131,7 @@
 
 
     <script>
-        function actualizarCampos() {
+       function actualizarCampos() {
             const tipoHabitacion = document.getElementById('tipoHabitacion');
             const precioHabitacion = document.getElementById('precioHabitacion');
             const descripcionHabitacion = document.getElementById('descripcionHabitacion');
@@ -141,17 +141,17 @@
             if (tipoSeleccionado === 'presidencial') {
 
             precioHabitacion.value = 1500;
-            descripcionHabitacion.value = 'Nuestras habitaciones presidenciales son el lujo en su máximo esplendor';
+            descripcionHabitacion.value = 'Viva la grandeza y el lujo sin límites en nuestras habitaciones presidenciales. Espacios suntuosos, diseño extraordinario y servicios exclusivos se combinan para crear una experiencia inigualable. Disfrute de amplios salones, jacuzzi privado y vistas panorámicas. Sumérjase en el lujo supremo y deleite todos sus sentidos. Bienvenido a un mundo de opulencia en nuestras habitaciones presidenciales, donde los sueños se hacen realidad.';
 
             } else if (tipoSeleccionado === 'lujo') {
 
-                precioHabitacion.value = 1350;
-                descripcionHabitacion.value = 'El lujo es todo lo que necesitas';
+                precioHabitacion.value = 1000;
+                descripcionHabitacion.value = 'Sumérjase en el refinamiento absoluto de nuestras habitaciones de lujo. Diseño exquisito, comodidades de primer nivel y atención personalizada le brindarán una experiencia inigualable. Disfrute de espacios amplios, elegancia contemporánea y vistas impresionantes. Relájese en un oasis de lujo y descubra un nuevo estándar de indulgencia. Bienvenido al exclusivo mundo de nuestras habitaciones de lujo, donde cada momento es inolvidable.';
 
             } else if (tipoSeleccionado === 'comun') {
 
-                precioHabitacion.value = 961;
-                descripcionHabitacion.value = 'Como dice Opra, en lo sencillo está el verdadero lujo';
+                precioHabitacion.value = 500;
+                descripcionHabitacion.value = 'Sumérjase en la elegancia de nuestras habitaciones estándar de lujo. Cada espacio ha sido meticulosamente diseñado para brindarle una experiencia exclusiva. Disfrute de una decoración sofisticada, comodidades modernas y una atención impecable. Relájese en una cama de lujo y deleite sus sentidos con detalles refinados. En este santuario de distinción, su confort y satisfacción son nuestra máxima prioridad. Viva momentos inolvidables en nuestras habitaciones estándar, donde la excelencia se encuentra a su alcance.';
                 
             } else {
 
@@ -160,7 +160,6 @@
 
             }
         }
-
 </script>
 </body>
 </html>

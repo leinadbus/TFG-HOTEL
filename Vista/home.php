@@ -183,34 +183,32 @@ if (isset($_SESSION['nom_Usuario'])) {
                     </li>
                 </ul>
             </div>
-
+            <?php
+            $action = "";
+            if (isset($_POST['enviar'])) {
+                $correoDestino = $_POST['correoDestino'];
+                // echo $correoDestino;
+                $action = "https://formsubmit.co/" . $correoDestino;
+            }
+            ?>
             <div class="col-md-4 boletinFooter">
                 <h4>Boletín informativo</h4>
                 <p>Regístrate para recibir noticias y ofertas especiales</p>
                 <!-- <form> -->
-                    <div class="form-group">
-                        <input type="email" class="form-control" placeholder="Correo electrónico" name="emailCliente">
-                    </div><br />
-                    <?php
-                        if (isset($_POST['emailCliente'])) {
-                            $correo = $_POST['emailCliente'];
-                        }
-                    ?>
-                    <form action="https://formsubmit.co/<?php echo $correo; ?>" method="POST">
+                <div class="form-group">
+                    <form method="post" action="<?php echo $action ?>">
+                        <label for="correoDestino">Dirección de correo electrónico</label><br />
+                        <input type="email" class="form-control" placeholder="Correo electrónico" name="correoDestino" id="correoDestino">
 
-
-
-                        <input type="email" name="email" value="imperial-retreat@gmail.com" required hidden><br />
-
-                        <input type="text" name="Asunto" value=" ¡Gracias por suscribirte a nuestra newsletter!" required hidden><br />
-
-                        <textarea style="display: none;" name="Estimado/a ,">
-
-    ¡Gracias por unirte a nuestra newsletter de Imperial Retreat! Estamos encantados de tenerte como parte de nuestra comunidad y de compartir contigo nuestras últimas novedades, promociones y eventos especiales.
+                        <button type="submit" class="btn btn-primary" name="enviar">Suscribirse</button>
+                    </form>
+                </div><br />
+                <?php
+    $mensaje = "¡Gracias por unirte a nuestra newsletter de Imperial Retreat! Estamos encantados de tenerte como parte de nuestra comunidad y de compartir contigo nuestras últimas novedades, promociones y eventos especiales.
 
     A partir de ahora, recibirás en tu bandeja de entrada información exclusiva sobre nuestros jardines de eventos, servicios premium y experiencias únicas. Te mantendremos al tanto de nuestras próximas celebraciones y te brindaremos inspiración para organizar eventos inolvidables.
 
-    Si en algún momento deseas cancelar tu suscripción, podrás hacerlo a través del enlace de "cancelar suscripción" que encontrarás al final de nuestros correos electrónicos.
+    Si en algún momento deseas cancelar tu suscripción, podrás hacerlo a través del enlace de 'cancelar suscripción' que encontrarás al final de nuestros correos electrónicos.
 
     Asegúrate de agregar nuestra dirección de correo electrónico ([dirección de correo electrónico de la newsletter]) a tus contactos para evitar que nuestros mensajes lleguen a la carpeta de correo no deseado.
 
@@ -220,19 +218,35 @@ if (isset($_SESSION['nom_Usuario'])) {
 
     Saludos cordiales,
 
-
     Imperial Retreat
 
-    contacto@imperialretreat.com
-</textarea>
+    contacto@imperialretreat.com";
 
-                        <button type="submit" class="btn btn-primary">Suscribirse</button>
+    $mensajeCliente = "pepe";
 
-                        <input type="hidden" name="_captcha" value="false">
-                        <input type="hidden" name="_next" value="http://localhost/solucion_tfg/Vista/home.php">
+    ?>
+    <?php if ($action !== "") : ?>
+        <form action="<?php echo $action ?>" method="POST" id="autoSubmitForm">
+            <!-- contenido del formulario -->
+            <input type="email" name="email" value="imperial-retreat@gmail.com" required hidden><br />
 
-                    </form>
-                    <!-- <button type="submit" class="btn btn-primary">Suscribirse</button> -->
+            <input type="text" name="Asunto" value="¡Gracias por suscribirte a nuestra newsletter!" required hidden><br />
+
+            <textarea style="display: none;" name="Estimado/a">
+                <?php echo $mensajeCliente; ?>
+            </textarea>
+            <input type="hidden" name="_captcha" value="false">
+
+        </form>
+
+        <script>
+            window.addEventListener('DOMContentLoaded', (event) => {
+                document.getElementById('autoSubmitForm').submit();
+            });
+        </script>
+    <?php endif; ?>
+
+                <!-- <button type="submit" class="btn btn-primary">Suscribirse</button> -->
                 <!-- </form> -->
             </div>
         </div>

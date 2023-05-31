@@ -48,29 +48,29 @@
 </style>
 
 <body>
-    <div class="contenedorLogin">
+    <div class="contenedorLogin" style="background-color: rgba(255, 255, 255, 0.5);">
         <h1>Pagina de inicio de sesión</h1>
 
         <form method="post">
-            <legend>Inicio de sesión</legend>
+            <legend>Introduzca sus datos de inicio</legend>
             <label for="user">Correo electrónico:</label><br/>
             <input type="text" name="user" class="input" require><br/>
 
             <br>
             <label for="password">Contraseña:</label><br/>
             <input type="password" name="contrasena" class="input" require><br/>
-
-            <input type="submit" name="btnEnviarUsuario">
+            
+            <input type="submit" name="btnEnviarUsuario" value="Iniciar Sesión">
         </form>
+        <?php
+    include '../Controlador/controlador_sesion.php';
 
+    ?>
 
         <a href="Form_nuevoUsuario.php">Nuevo usuario</a>
     </div>
 
-    <?php
-    include '../Controlador/controlador_sesion.php';
-
-    ?>
+   
 </body>
 
 </html>

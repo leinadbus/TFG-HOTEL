@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Registro Nuevo Usuario</title>
     <link rel="stylesheet" type="text/css" href="style.css">
-    <link rel="stylesheet" type="text/css" href="fondoLoginRegistro.css">
+    <!-- <link rel="stylesheet" type="text/css" href="fondoLoginNuevoUsuario.css"> -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script>
 
@@ -15,7 +15,6 @@
 <style>
     .input {
         background-color: rgba(0, 0, 0, 0.1);
-
     }
 </style>
 
@@ -24,6 +23,9 @@
     <?php
     include "../Controlador/controlador_sesion.php";
     ?>
+    <div style="display: flex; justify-content: center;">
+        <img src="../img/logoOriginalSinUvas.png" style="width: 20%; height: 20%;">
+    </div>
     <div class="contenedorFormulario">
         <h1>Nuevo Usuario</h1>
         <div class="formularioRegistro">
@@ -52,11 +54,6 @@
                     <input type="text" class="input" name="correoElectronico2" id="mail2" size="30" required>
                     <span id="correoDiferente" class="error" style="color: red;"></span>
 
-
-                    <!-- pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" -->
-
-                    <!-- <label for="user">Nombre de usuario: *</label>
-                <input type="text" name="nombreUsuario" id="nombreUsuario" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ0-9\s]{3,20}$" required>  -->
                     <br />
                     <label for="pass">Contraseña: <span style="color: red; font-size: 20px;">*</span></label>
                     <input type="password" class="input" id="password" name="contraseñaUsuario" required size="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,./?]).{8,20}">
@@ -65,7 +62,7 @@
                     <br>
                     <div id="fuerza" value=""></div>
                     <div style="display: flex; justify-content: center;">
-                        <input type="submit" name="btnNuevoUsuario" id="" value="Iniciar Sesion">
+                        <input type="submit" name="btnNuevoUsuario" id="" value="Registrarse">
                     </div>
 
                     <p><?php echo $msg ?? '' ?></p>
@@ -74,9 +71,6 @@
         </div>
 
     </div>
-
-    <!-- <script type="text/javascript" async src="https://tenor.com/embed.js"></script> -->
-
 
 
 </body>

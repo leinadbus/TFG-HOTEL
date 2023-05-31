@@ -19,6 +19,17 @@
 
 
 </head>
+<style>
+    .botonMagico {
+        position: absolute;
+        z-index: 1;
+        top: 50px;
+        left: 40px;
+        width: 220px;
+        height: 300px;
+        background-color: transparent;
+    }
+</style>
 
 
 <body>
@@ -106,20 +117,17 @@
 
         <div class="containerPie">
             <!-- Restaurante -->
-            <form method="post">
                 <div id="carouselRestaurante">
                     <div class="cabeceraCarousel">Restaurante</div>
                     <div id="carouselRestauranteSlide" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner imgCarouselRestaurante">
-                            <div class="carousel-item active">
+                            <form method="post">
                                 <button class="btn" name="btn_pagina_Galeria" style="background-color: transparent; opacity: 1;">
-
-                                    <img src="../img/restaurante/foto1.jpg" class="d-block w-100" alt="...">
-
+                                    <div class="botonMagico"> </div>
                                 </button>
-
-
-
+                            </form>
+                            <div class="carousel-item active">
+                                <img src="../img/restaurante/foto1.jpg" class="d-block w-100" alt="...">
                             </div>
                             <div class="carousel-item">
                                 <img src="../img/restaurante/foto2.jpg" class="d-block w-100" alt="...">
@@ -158,12 +166,16 @@
                         </div>
                     </div>
                 </div>
-            </form>
             <!-- Eventos -->
             <div id="carouselEventos">
-                <div class="cabeceraCarousel"><a href="Galeria.php"><span style="text-decoration: none;">Eventos</span></a></div>
+                <div class="cabeceraCarousel">Eventos</div>
                 <div id="carouselEventosSlide" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner imgCarouselEventos">
+                        <form method="post">
+                            <button class="btn" name="btn_pagina_Eventos" style="background-color: transparent; opacity: 1;">
+                                <div class="botonMagico"> </div>
+                            </button>
+                        </form>
                         <div class="carousel-item active">
                             <img src="../img/evento/sala_jardin/jardin1.jpg" class="d-block w-100" alt="...">
                         </div>
@@ -207,6 +219,11 @@
                 <div class="cabeceraCarousel">Espacio Relax</div>
                 <div id="carouselSpaSlide" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner imgCarouselSpa">
+                        <form method="post">
+                            <button class="btn" name="btn_pagina_Galeria" style="background-color: transparent; opacity: 1;">
+                                <div class="botonMagico"> </div>
+                            </button>
+                        </form>
                         <div class="carousel-item active">
                             <img src="../img/spa/foto1.jpg" class="d-block w-100" alt="...">
                         </div>

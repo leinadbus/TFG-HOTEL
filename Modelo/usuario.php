@@ -109,13 +109,13 @@
                         // echo "si";
                         return true;
                     }else{
-                        echo "Contraseña no válida";
+                         echo "<p style='color: red; text-align: center; font-weight: bold;'>Contraseña no válida</p>";
                         return false;
                         
                     }
                     
                 }else
-                echo "Correo no válido";
+                echo "<p style='color: red; text-align: center; font-weight: bold;'>Correo no válido</p>";
                 return false;
             } catch (PDOException $e) {
                 echo "<br/>ERROR AL OBTENER POR ID " . $e->getMessage();

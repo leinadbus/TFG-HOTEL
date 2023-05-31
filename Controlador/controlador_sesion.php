@@ -8,13 +8,12 @@ if(isset($_REQUEST['inicio_Sesion'])){
 }
 
 if(isset($_REQUEST['btnNuevoUsuario'])){
-    $nuevoUsuario = new Usuario($_POST['nombrePropio'],
-                                $_POST['primerApellido'],
-                                $_POST['segundoApellido'],
-                                $_POST['telefono'],
-                                $_POST['correoElectronico'],
-                                // $_POST['nombreUsuario'],
-                                $_POST['contraseñaUsuario'],
+    $nuevoUsuario = new Usuario(filter_var($_POST['nombrePropio'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+                                filter_var($_POST['primerApellido'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+                                filter_var($_POST['segundoApellido'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
+                                filter_var($_POST['telefono'], FILTER_SANITIZE_NUMBER_INT),
+                                filter_var($_POST['correoElectronico'], FILTER_SANITIZE_EMAIL),
+                                filter_var($_POST['contraseñaUsuario'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),
                                 'cliente');
             if(!$nuevoUsuario->comprobarCorreoExistente($_POST['correoElectronico'])){
                 if($nuevoUsuario->crearUsuario()){
@@ -38,15 +37,17 @@ if(isset($_REQUEST['cerrar_usuario'])){
 
 if(isset($_REQUEST['btnEnviarUsuario'])){
 
-    $usuarioEjemplo = new Usuario('','','','',$_POST['user'],$_POST['contrasena'],'');
+    $usuarioEjemplo = new Usuario('','','','',
+                                    filter_var($_POST['user'], FILTER_SANITIZE_EMAIL),
+                                    filter_var($_POST['contrasena'], FILTER_SANITIZE_FULL_SPECIAL_CHARS),'');
     if($usuarioEjemplo->comprobarUsuarioBD($_POST['user'],$_POST['contrasena'],$usuarioEjemplo)){
 
        
         session_start();
-        $registro = $usuarioEjemplo->obtieneInfoUsuario($_POST['user']);
+        $registro = $usuarioEjemplo->obtieneInfoUsuario(filter_var($_POST['user'], FILTER_SANITIZE_EMAIL));
        
         $_SESSION['nom_Usuario']= $registro[0]->nombre;
-        $registros = $usuarioEjemplo->comprobarTipoUsuario($_POST['user'],$_POST['contrasena']);
+        $registros = $usuarioEjemplo->comprobarTipoUsuario(filter_var($_POST['user'], FILTER_SANITIZE_EMAIL),filter_var($_POST['contrasena'], FILTER_SANITIZE_FULL_SPECIAL_CHARS));
         $_SESSION['correo_Usuario'] = $registro[0]->correo;
         $_SESSION['tipo_Usuario']=$registros[0]['rol'];
            header("location:home.php");
@@ -55,6 +56,8 @@ if(isset($_REQUEST['btnEnviarUsuario'])){
         
 
 
+    } else {
+        $msg = "Contraseña no válida";
     }
 }
 

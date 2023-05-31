@@ -20,7 +20,9 @@
 </head>
 
 <body>
-
+<div style="display: flex; justify-content: center;">
+        <img src="../img/logoOriginalSinUvas.png" style="width: 20%; height: 20%;">
+    </div>
     <div class="contenedorFormulario" style="margin-bottom: 250px;">
         <h1>Nuevo Administrador</h1>
         <div class="formularioRegistro">
@@ -47,11 +49,6 @@
                     <input type="text" name="correoElectronico2" id="mail2" size="30" required>
                     <span id="correoDiferente" class="error" style="color: red;"></span>
 
-
-                    <!-- pattern="/^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/" -->
-
-                    <!-- <label for="user">Nombre de usuario: *</label>
-                <input type="text" name="nombreUsuario" id="nombreUsuario" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ0-9\s]{3,20}$" required>  -->
                     <br />
                     <label for="pass">Contraseña: <span style="color: red; font-size: 20px;">*</span></label>
                     <input type="password" id="password" name="contraseñaUsuario" required size="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,./?]).{8,20}">

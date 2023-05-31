@@ -154,5 +154,6 @@ if(isset($_REQUEST['btn_Administracion'])){
 // btn_enviar_reservas
 // btn_enviar_extras
 // cambiarEstadoHabitacion
+// btnNuevoAdmin
 ?>
 
