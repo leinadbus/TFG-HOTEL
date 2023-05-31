@@ -16,7 +16,7 @@
         include "../Controlador/controlador_admin.php";
 ?>
 
-<h1>Todas las habitaciones</h1>
+<h1>Todas las salas</h1>
 <br><br><br>
 <style>table, td, th{border: solid black 1px;}</style>
                     <table>

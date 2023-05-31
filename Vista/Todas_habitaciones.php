@@ -21,7 +21,7 @@
 <style>table, td, th{border: solid black 1px;}</style>
                     <table>
                     <tr>
-                        <th>cod_habitación</th>
+                        <th>Nº habitación</th>
                         <th>Tipo</th>
                         <th>Precio</th>
                         <th>Planta</th>

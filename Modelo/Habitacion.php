@@ -45,10 +45,10 @@
                 <td>". $x->tipo_estancia . "</td>
                 <td>". $x->precio ."€</td>
                 <td>". $x->planta . "</td>" ; 
-                if ($x->estado == 'libre') {
-                    echo "<td style='background-color: #F5F5DC;'>Disponible</td>";
+                if ($x->estado != 'libre') {
+                    echo "<td style='background-color: #FFD6D6;'>No Disponible</td>";
                 }
-                 else echo "<td style='background-color: #FFD6D6;'>No Disponible</td>"; 
+                 else echo "<td >Disponible</td>"; 
                 // <td>". $x->estado ."</td>
                  echo "
                 <td>". $x->num_camas ."</td>

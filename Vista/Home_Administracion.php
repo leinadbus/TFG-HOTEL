@@ -40,7 +40,7 @@
             <button name="btn_ver_habitaciones" class="btn btn-secondary">Ver habitaciones</button>
             <button name="btn_ver_salas" class="btn btn-secondary">Ver salas</button>
             <button name="btn_reserva_admin" class="btn btn-secondary">Hacer reserva</button>
-            <button name="btn_reserva_admin" class="btn btn-secondary">Buscar cliente</button>
+            <button name="btn_reserva_admin" class="btn btn-secondary" disabled>Buscar cliente</button>
         </div>
     </form>
 

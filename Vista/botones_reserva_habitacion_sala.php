@@ -16,7 +16,7 @@
     <h2>¿Que tipo de reserva vas a gestionar?</h2>
     <form method="post">
     <button name="reserva_habitacion_admin" class="btn">Reservar habitación</button>
-    <button name="reserva_sala_admin" class="btn" >Reservar sala</button>
+    <button name="reserva_sala_admin" class="btn" disabled>Reservar sala</button>
     </form>
 </body>
 </html>

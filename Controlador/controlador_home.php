@@ -125,6 +125,10 @@ if(isset($_REQUEST['btn_Administracion'])){
     
     include '../Vista/Home_Administracion.php';
     
+  }  else if (isset($_REQUEST['cambiarEstadoSala'])) {
+    
+    include '../Vista/Home_Administracion.php';
+    
   }else{
     
     include '../Vista/Home_principal.php';

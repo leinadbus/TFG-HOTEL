@@ -91,6 +91,32 @@ li > a{
 
 
 /*******************************************************/
+/* Tablas  */
+table {
+    background-color: white;
+    text-align: center;
+    border-collapse: collapse;
+    /* width: 90%; */
+    /* margin: 0 auto; */
+    margin: 0 auto;
+    margin-top: 15px;
+    margin-bottom: 25px;
+    
+}
+
+th,td {
+    padding: 10px;
+}
+
+th {
+    background-color: #c4c8c5;
+    border-bottom: solid 5px #34baab;
+    color: black;
+}
+
+tr:nth-child(even) {
+    background-color: #ddd;
+}
 
 
 /* 

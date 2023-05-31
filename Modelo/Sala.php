@@ -41,17 +41,20 @@
                 <td>". $x->cod_sala . "</td>
                 <td>". $x->tipo_estancia . "</td>
                 <td>". $x->precio ."€</td>
-                <td>". $x->planta . "</td>
-                <td>". $x->estado ."</td>
+                <td>". $x->planta . "</td>";
+                if ($x->estado == 'libre') {
+                    echo "<td style='background-color: #F5F5DC;'>Disponible</td>";
+                }
+                 else echo "<td style='background-color: #FFD6D6;'>No Disponible</td>"; 
+                
+                 echo "
                 <td>". $x->aforo ."</td>
                 <td>". $x->tipo_sala ."</td>
                 <td>". $x->ubicacion ."</td>
                 <td>". $x->descripcion ."</td>
                 <td>". $x->localidad ."</td>
                 <td>". $x->cod_estancia ."</td>
-                <td><form method='post'> <button name=sinAccion value='$x->cod_sala]'>Habilitar/Deshabilitar</button></form></td>
-                <td><form method='post'> <button name=sinAccion value='$x->cod_sala]'>Borrar</button></form></td>
-                <td><form method='post'> <button name=sinAccion value='$x->cod_sala]'>Modificar</button></form></td>
+                <td><form method='post'> <button name=cambiarEstadoSala value='$x->cod_estancia'>Habilitar/Deshabilitar</button></form></td>
                 </tr>";
             }
         }  catch (PDOException $e) {
@@ -113,6 +116,45 @@
                 $sql = "UPDATE " . self::$TABLA . " SET aforo='$aforo', tipo_sala='$tipoSala', cod_estancia='$cod_estancia' WHERE cod_sala='$cod_sala'";
                 $cone->exec($sql);
                 echo "<br/>modificado sala";
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL MODIFICAR HABITACION " . $e->getMessage();
+            }
+        }
+
+
+        function obtenerIdSalaConEstancia($id)
+        {
+            try {
+                $sql = $this->conexion->prepare("SELECT * FROM estancia, sala WHERE estancia.cod_estancia = sala.cod_estancia AND estancia.cod_estancia = $id");
+                $sql->execute();
+                $resultado = $sql->fetchAll(PDO::FETCH_ASSOC);
+
+                return $resultado;
+            } catch (PDOException $e) {
+                echo "<br/>ERROR AL OBTENER FOTO POR ID " . $e->getMessage();
+            }
+        }
+
+
+        /*
+        Función que cambia el estado de la sala de libre a ocupado y viceversa
+        Hago una consulta a la bd con el codigo, saco el estado, si es uno lo cambio si es otro tambien con un update
+        */
+        function cambiarEstadoHabitación( $cod_estancia)
+        {
+            try {
+                $cone = $this->conexion;
+                $registro = $this->obtenerIdSalaConEstancia($cod_estancia);
+                $estado = $registro[0]['estado'];
+                    if( $estado == 'libre'){
+                        $sql = "UPDATE estancia SET estado='ocupado' WHERE cod_estancia='$cod_estancia'";
+                        $cone->exec($sql);
+                    }else {
+                        $sql = "UPDATE estancia SET estado='libre' WHERE cod_estancia='$cod_estancia'";
+                        $cone->exec($sql);
+                    }
+                // $sql = "UPDATE " . self::$TABLA . " SET num_camas='$numCamas', tipo_bano='$tipoBano', cod_estancia='$cod_estancia' WHERE cod_habitacion='$cod_habitacion'";
+                // echo "<br/>modificado habitacion";
             } catch (PDOException $e) {
                 echo "<br/>ERROR AL MODIFICAR HABITACION " . $e->getMessage();
             }

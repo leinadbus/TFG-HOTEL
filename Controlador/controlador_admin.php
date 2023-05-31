@@ -99,6 +99,10 @@ if (isset($_REQUEST['btnNuevaSala'])) {
     // echo $estadoHabitacion; 
     $habitacionGeneral->cambiarEstadoHabitación($estadoHabitacion);
  }
-
+ if(isset($_REQUEST['cambiarEstadoSala'])) {
+    $estadoHabitacion = $_POST['cambiarEstadoSala'];
+    // echo $estadoHabitacion; 
+    $salaGeneral->cambiarEstadoHabitación($estadoHabitacion);
+ }
  
 ?>

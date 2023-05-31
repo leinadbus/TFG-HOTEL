@@ -53,7 +53,7 @@
                     <label for="mail">Confirma el correo electrónico: <span style="color: red; font-size: 20px;">*</span></label>
                     <input type="text" class="input" name="correoElectronico2" id="mail2" size="30" required>
                     <span id="correoDiferente" class="error" style="color: red;"></span>
-
+                    <p style='color: red; text-align: center; font-weight: bold;'><?php echo $msg ?? '' ?></p>
                     <br />
                     <label for="pass">Contraseña: <span style="color: red; font-size: 20px;">*</span></label>
                     <input type="password" class="input" id="password" name="contraseñaUsuario" required size="30" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z])(?=.*[!@#$%^&*()_+\-=[\]{};':\\|,./?]).{8,20}">
@@ -65,7 +65,6 @@
                         <input type="submit" name="btnNuevoUsuario" id="" value="Registrarse">
                     </div>
 
-                    <p><?php echo $msg ?? '' ?></p>
                 </fieldset>
             </form>
         </div>

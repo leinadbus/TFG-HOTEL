@@ -20,12 +20,10 @@
 </head>
 
 <body>
-<div style="display: flex; justify-content: center;">
-        <img src="../img/logoOriginalSinUvas.png" style="width: 20%; height: 20%;">
-    </div>
+
     <div class="contenedorFormulario" style="margin-bottom: 250px;">
         <h1>Nuevo Administrador</h1>
-        <div class="formularioRegistro">
+        <div class="formularioRegistro" style="background-color: rgba(255, 255, 255, 0.5);">
             <form onsubmit="return validarFormulario()" method="post">
                 <fieldset>
                     <legend>Registro</legend>
