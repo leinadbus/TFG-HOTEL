@@ -83,16 +83,13 @@
 
         if (!correo.match(regex)) {
             alert("Correo electrónico inválido");
-
             document.getElementById("errorCorreo").textContent = "Correo electrónico inválido";
             return false; // Evita enviar el formulario si el correo es inválido
         }
-
         // Verificar si las direcciones de correo electrónico coinciden
         if (!comprobarEmailsIguales()) {
             return false; // Evita enviar el formulario si las direcciones no coinciden
         }
-
         // Si todo está válido, se envía el formulario
         return true;
     }

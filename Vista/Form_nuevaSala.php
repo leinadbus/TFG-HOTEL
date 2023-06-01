@@ -149,18 +149,18 @@
 
             if (tipoSeleccionado === 'reunion') {
 
-            precioHabitacion.value = 1500;
-            descripcionHabitacion.value = 'Nuestras habitaciones presidenciales son el lujo en su máximo esplendor';
+            precioHabitacion.value = 250;
+            descripcionHabitacion.value = 'Nuestra sala de reuniones es el espacio perfecto para llevar a cabo encuentros corporativos y de negocios. Con un ambiente elegante y sofisticado, esta sala ofrece todas las comodidades necesarias para reuniones productivas. Equipada con tecnología audiovisual de última generación y mobiliario ergonómico, brindamos un entorno propicio para presentaciones, debates y sesiones de trabajo. Nuestro equipo de eventos estará disponible para satisfacer todas las necesidades, desde la disposición de mesas y sillas hasta servicios de catering personalizados.';
 
             } else if (tipoSeleccionado === 'conferencia') {
 
-                precioHabitacion.value = 1350;
-                descripcionHabitacion.value = 'El lujo es todo lo que necesitas';
+                precioHabitacion.value = 2500;
+                descripcionHabitacion.value = 'Nuestra sala de conferencias está diseñada para acoger eventos de gran envergadura, como conferencias, seminarios y presentaciones. Con capacidad para un gran número de asistentes, esta sala ofrece un ambiente amplio y confortable, equipado con sistemas de sonido de alta calidad y proyección audiovisual de primer nivel. El diseño adaptable de la sala permite diferentes configuraciones para adaptarse a las necesidades específicas de cada evento. Nuestro equipo de tecnología estará presente para brindar soporte técnico durante todo el evento, asegurando una experiencia sin contratiempos.';
 
             } else if (tipoSeleccionado === 'boda') {
 
-                precioHabitacion.value = 961;
-                descripcionHabitacion.value = 'Como dice Opra, en lo sencillo está el verdadero lujo';
+                precioHabitacion.value = 3000;
+                descripcionHabitacion.value = 'Nuestra sala de bodas es el lugar perfecto para celebrar ese día especial con elegancia y estilo. Con una decoración exquisita y un ambiente romántico, esta sala ofrece un entorno mágico para celebrar matrimonios y recepciones. Desde la iluminación hasta la disposición de las mesas, cuidamos cada detalle para crear una atmósfera inolvidable. Nuestro equipo de expertos en eventos estará a su disposición para asistir en la planificación y coordinación de cada aspecto de su boda, incluyendo la selección de menús personalizados, la decoración floral y la organización de servicios adicionales, como música en vivo o fotógrafos profesionales.';
                 
             } else {
 

@@ -8,10 +8,6 @@
     <title>Imperial Retreat</title>
     <link rel="icon" type="image/png" href="../img/logoVentanaNavegador2.png">
 
-    <!-- <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KK94CHFLLe+nY2dmCWGMq91rCGa5gtU4mk92HdvYe+M/SXH301p5ILy+dN9+nJOZ" crossorigin="anonymous">
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.bundle.min.js" integrity="sha384-ENjdO4Dr2bkBIFxQpeoTz1HIcje39Wm4jDKdf19U8gI4ddQ3GYNS7NTKfAdVQSZe" crossorigin="anonymous"></script> -->
-    <!-- <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.7/dist/umd/popper.min.js" integrity="sha384-zYPOMqeu1DAVkHiLqWBUTcbYfZ8osu1Nd6Z89ify25QV9guujx43ITvfi12/QExE" crossorigin="anonymous"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha3/dist/js/bootstrap.min.js" integrity="sha384-Y4oOpwW3duJdCWv5ly8SCFYWqFDsfob/3GkgExXKV4idmbt98QcxXYs9UoXAB7BZ" crossorigin="anonymous"></script> -->
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
@@ -60,9 +56,6 @@ if (isset($_SESSION['nom_Usuario'])) {
 
         <!-- div nombre-->
         <div>
-            <!-- <a class="titulo">
-                Imperial Retreat
-            </a> -->
             <form method="post">
                 <button name="btn_Inicio" class="nav-link active titulo">Imperial Retreat</button>
             </form>
@@ -95,12 +88,7 @@ if (isset($_SESSION['nom_Usuario'])) {
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse justify-content-center" id="navbarNavAltMarkup">
-                <!-- <button class="navbar-toggler" id="hamburguesa" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarNav"> -->
-                <form method="post">
+  <form method="post">
                     <ul class="navbar-nav">
                         <li class="nav-item">
                             <button name="btn_Inicio" class="nav-link active">Inicio</button>
@@ -108,22 +96,12 @@ if (isset($_SESSION['nom_Usuario'])) {
                             <button class="nav-link active" aria-current="page" name="btn_pagina_Galeria">Galeria</button>
                         </li>
 
-                        <!-- <li class="nav-item">
-                            <select class="form-select form-select-sm" aria-label=".form-select-sm example">
-                                <option selected>Reservas</option>
-                                <option value="1">Habitaciones</option>
-                                <option value="2">Sala de Evento</option>
-                            </select>
-                        </li> -->
-                        <li class="nav-item">
+                      <li class="nav-item">
                             <button class="nav-link active" aria-current="page" name="btn_pagina_Habitaciones">Habitaciones</button>
                         </li>
                         <li class="nav-item">
                             <button class="nav-link active" aria-current="page" name="btn_pagina_Eventos">Salas de eventos</button>
                         </li>
-                        <!-- <li class="nav-item">
-                            <button class="nav-link active" href="#">Ofertas</button>
-                        </li> -->
                         <li class="nav-item">
                             <button class="nav-link active" aria-current="page" name="btn_pagina_Contacto">Contacto</button>
                         </li>
@@ -145,7 +123,7 @@ if (isset($_SESSION['nom_Usuario'])) {
     </nav>
     <div class="container">
         <?php
-        // include '../Controlador/controlador_sesion.php';
+      
         include '../Controlador/controlador_home.php';
         include "../Controlador/controlador_admin.php";
         ?>
@@ -187,7 +165,7 @@ if (isset($_SESSION['nom_Usuario'])) {
             $action = "";
             if (isset($_POST['enviar'])) {
                 $correoDestino = $_POST['correoDestino'];
-                // echo $correoDestino;
+             
                 $action = "https://formsubmit.co/" . $correoDestino;
             }
             ?>
@@ -246,9 +224,7 @@ if (isset($_SESSION['nom_Usuario'])) {
         </script>
     <?php endif; ?>
 
-                <!-- <button type="submit" class="btn btn-primary">Suscribirse</button> -->
-                <!-- </form> -->
-            </div>
+              </div>
         </div>
         <div class="footerLogo">
             <div class="col-md-4 "><br /><br />
@@ -261,10 +237,7 @@ if (isset($_SESSION['nom_Usuario'])) {
         </div>
 
     </footer>
-    <!-- </div>                -->
-
-    <!-- <br /><br /><br /><br />  -->
-
+   
 </body>
 
 </html>
