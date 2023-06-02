@@ -5,6 +5,41 @@
         - Para dispositivos de pantalla grande: 769px a 1200px de ancho
 
 */
+.containerPie {
+  /* background-color: peru; */
+  display: flex;
+  justify-content: space-between
+  ;
+}
+
+
+
+@media (max-width: 530px){
+  .containerPie {
+    /* background-color: lightsalmon; */
+    display: flex;
+    flex-direction: column;
+    
+    margin-bottom: 500px;
+  }
+
+  .iconos {
+    /* background-color: red; */
+    display: flex;
+    margin-left: -100px;
+    margin-top: 20px;
+  }
+  
+  input[type="submit"]:nth-child(2) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  
+}
+
+
 .footer {
     margin-top: 20px;
     margin-bottom: 0; /* eliminamos el margen inferior por defecto */

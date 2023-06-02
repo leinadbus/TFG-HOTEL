@@ -30,13 +30,35 @@
                 ¡Esperamos darle la bienvenida pronto a nuestro hotel de lujo y hacer de su estadía una experiencia inolvidable!</p>
         </div>
     </section>
+
+
+
+
+
+
+
     <div class="container">
-        <div class="contenedorFormulario">
+        <div class="contenedorFormulario ">
             <h1>Contacto</h1>
             <p>Por favor, complete el siguiente formulario para ponerse en contacto con nosotros:</p>
-            <div class="formularioContacto">
-    
-                <form method="post">
+            <div class="formularioContacto contactoFormulario" name="contactoFormulario">
+             <?php
+            $action2 = "";
+            if (isset($_POST['enviar2'])) {
+                $correoDestino = $_POST['correoDestino'];
+                $nombre = $_POST['nombre'];
+                $correoCliente = $_POST['correoElectronico'];
+                $telefono = $_POST['telefono'];
+                $asunto = $_POST['asunto'];
+                $mensaje = $_POST['mensaje'];
+
+
+                $action2 = "https://formsubmit.co/" . $correoDestino;
+            }
+            ?> 
+                <form method="post" action="ContactoEnvio.php" id="formularioContacto" name="formularioContacto">
+
+                <input type="email" hidden class="form-control"  name="correoDestino" id="correoDestino" value="gerardojaviermiranda.daw@ciudadescolarfp.es" >
                     <label for="nombre">Nombre: *</label>
                     <input type="text" id="nombre" name="nombre" size="29" pattern="^[A-Za-záéíóúÁÉÍÓÚñÑ\s]{3,20}$" required>
                     <label for="email">Correo electrónico: *</label>
@@ -48,21 +70,38 @@
                     <input type="text" id="asunto" name="asunto" size="29" required><br>
                     <label for="mensaje">Mensaje:</label><br/>
                     <textarea id="mensaje" name="mensaje" rows="8" cols="31" required></textarea><br/><br/>
-                    <div class="botonEnvio">
-                        <input type="submit" value="Enviar">
-                    </div>
-                    
+                    <button type="submit" class="btn btn-primary" name="enviar2">Enviar</button>
 
                 </form>
+
+
             </div>
         </div>
 
 
     </div>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 </body>
 
 <script>
-        function validarFormulario() {
+    function validarFormulario() {
         let correo = document.getElementById("email").value;
         let regex = /^\w+([.-]?\w+)*@\w+([.-]?\w+)*(\.\w{2,3})+$/;
 

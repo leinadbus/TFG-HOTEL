@@ -90,6 +90,8 @@ li > a{
 }
 
 
+
+
 /*******************************************************/
 /* Tablas  */
 table {
@@ -117,7 +119,6 @@ th {
 tr:nth-child(even) {
     background-color: #ddd;
 }
-
 
 /* 
 input:invalid {
@@ -198,6 +199,7 @@ input:invalid {
     width: 300px;
     height: 300px;
     margin-left: 20px;
+    
 }
 
 .imgCarouselRestaurante>div>img,

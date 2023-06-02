@@ -107,7 +107,7 @@
 
         <div class="containerPie">
             <!-- Restaurante -->
-                <div id="carouselRestaurante">
+                <div id="carouselRestaurante container" style="background-color: transparent; margin-right: 50px;">
                     <div class="cabeceraCarousel">Restaurante</div>
                     <div id="carouselRestauranteSlide" class="carousel slide" data-bs-ride="carousel">
                         <div class="carousel-inner imgCarouselRestaurante">
@@ -148,14 +148,14 @@
                         </button>
                     </div>
 
-                    <div class="descripcionRestaurante">
-                        <div>
+                    
+                        <div style="background-color: transparent;">
                             El restaurante del Imperial Retreat es una experiencia culinaria sin igual, con una amplia variedad de platos exquisitos preparados por chefs de renombre internacional. El ambiente es sofisticado y elegante, perfecto para cenas románticas o eventos especiales. Los ingredientes son cuidadosamente seleccionados de los mercados locales y de productores de alta calidad para ofrecer una cocina de temporada fresca y deliciosa. Además, el restaurante ofrece una extensa lista de vinos finos y bebidas artesanales para complementar tu comida.
-                           </div>
-                    </div>
+                            </div>
+                    
                 </div>
             <!-- Eventos -->
-            <div id="carouselEventos">
+            <div id="carouselEventos container"  style="background-color: transparent; margin-right: 50px;">
                 <div class="cabeceraCarousel">Eventos</div>
                 <div id="carouselEventosSlide" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner imgCarouselEventos">
@@ -199,9 +199,9 @@
                        </div>
                 </div>
             </div>
-
+            
             <!-- Spa -->
-            <div id="carouselSpa">
+            <div id="carouselSpa container"  style="background-color: transparent; margin-right: 50px; ">
                 <div class="cabeceraCarousel">Espacio Relax</div>
                 <div id="carouselSpaSlide" class="carousel slide" data-bs-ride="carousel">
                     <div class="carousel-inner imgCarouselSpa">
@@ -239,19 +239,13 @@
                 <div class="descripcionSpa">
                     <div>
                         El spa del Imperial Retreat es un refugio de tranquilidad y bienestar. Disfruta de un ambiente relajante y acogedor mientras te deleitas con una amplia variedad de servicios y tratamientos personalizados para rejuvenecer tu cuerpo y mente. Desde masajes y tratamientos faciales hasta saunas y baños turcos, nuestro spa es el lugar perfecto para desconectar y revitalizarte durante tu estancia en nuestro hotel.
-                       
-                    </div>
+                        </div>
                 </div>
             </div>
 
         </div>
 
-        <br /><br />
 
-
-
-
-        <br /><br /><br /><br />
     </div>
 
 <script>
